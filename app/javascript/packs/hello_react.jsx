@@ -12,7 +12,7 @@ const data = {
     {
       id: 'lane1',
       title: 'Planned',
-      label: '2/2',
+      label: '1/1',
       cards: [
         {id: 'Card1', title: 'Contact Jane Doe', description: 'Initial interview', label: '30 mins'},
       ]
