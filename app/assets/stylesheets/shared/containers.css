@@ -166,12 +166,13 @@
 
 .flex.panel.pghead{
   align-items: flex-end;
+  border-bottom: solid #cac4ce 1px;
   justify-content: flex-start;
 }
 .flex.panel.pghead > *:first-child{
 }
 .flex.panel.pghead > *:not(:first-child){
-  margin: 5.676% 3.767%;
+  margin: 5.676% 3.767% 1.7em;
   position: relative;
     bottom: 2px;
   text-align: center;
@@ -339,7 +340,7 @@
 .top-M.subcard > div > *{
   margin: 0 1em;
 }
-.top-M.subcard > h2{
+.top-M.subcard > a > h2{
   color: #2BC3E5;
   margin-left: 13px;
 }

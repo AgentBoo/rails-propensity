@@ -1,12 +1,18 @@
 <%# RIGHT SIDEPANEL yield :right_aside to content_for :right_aside %>
 
 <% content_for :right_aside do %>
-    <a href="#" class="xs link ver-1 js-switch-a"> Table </a>
-    <a href="#" class="xs link ver-1 js-switch-b"> Cards </a>
+    <a href="#" class="xs upcase bld link ver-1 js-switch-a"> Table </a>
+    <a href="#" class="xs upcase bld link ver-1 js-switch-b"> Cards </a>
 <% end %>
 
 <%# MAIN inside .inmain %>
-<h1 class="mgn-xy title-page bb"> All Donors </h1>
+<div class="flex panel pghead mgn-x">
+    <h1 class="indiv-pg-fullname">
+      All donors
+    </h1>
+    <a href="#" class="link ver-1 js-switch-a upcase"> Table </a>
+    <a href="#" class="link ver-1 js-switch-b upcase"> Cards </a>
+</div>
 
 <div class="mgn-xy js-switchable-a">
   <table id="tdonors-all">
@@ -77,6 +83,6 @@
   </table>
 </div>
 
-<div class="js-switchable-b">
+<div class="js-switchable-b visibility">
   <%= render partial: 'cards', donors: @donors %>
 </div>

@@ -17,3 +17,9 @@
 .w50p{
   width: 100%;
 }
+
+.closeBtn{
+  font-weight: bold;
+  font-size: 16px;
+  color: red;
+}

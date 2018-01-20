@@ -8,7 +8,14 @@
 <%# MAIN inside .inmain %>
 <!-- page title -->
 <!-- <div class="flex panel tertiary bb pad-x mgn-xy"> -->
-  <h1 class="title-page mgn-xy bb"> Dashboard </h1>
+<div class="flex panel pghead mgn-x">
+    <h1 class="indiv-pg-fullname">
+      Dashboard
+    </h1>
+    <%= link_to 'Map', root_path, class: 'link underline upcase' %>
+    <%= link_to 'Kanban', kanban_path, class: 'link underline upcase' %>
+</div>
+  <!-- <h1 class="title-page mgn-xy bb"> Dashboard </h1> -->
 <!-- </div> -->
 
 <!-- map section -->

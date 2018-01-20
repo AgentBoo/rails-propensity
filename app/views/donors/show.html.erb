@@ -1,12 +1,12 @@
   <p id="notice"><%= notice %></p>
 
-      <div class="flex panel pghead mgn-xy">
+      <div class="flex panel pghead mgn-x">
           <h1 class="indiv-pg-fullname">
             <%= @donor.first_name %> <%= @donor.last_name %>
           </h1>
           <%= link_to 'Edit', edit_donor_path(@donor), class: 'link underline upcase' %>
           <%= link_to 'Back', donors_path, class: 'link underline upcase' %>
-        </div>
+      </div>
 
 
         <!-- demo section -->

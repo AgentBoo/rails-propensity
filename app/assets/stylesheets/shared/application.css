@@ -53,11 +53,12 @@
   color: #001933;
   /* flex panel senary height */
   margin-top: 69px;
-  min-height: 568px;
+  min-height: 868px;
   /* sidenav + stria = 296px */
   margin-left: 56px;
   padding: 2.767% 0;
   z-index: -10;
+  transition: margin-left 0.4s linear;
 }
 
 /* footer */
@@ -161,6 +162,7 @@
      left: 56px;
    width: 0;
    z-index: 20;
+   transition: 0.4s linear;
  }
 .sidenav a{
   display: block;
