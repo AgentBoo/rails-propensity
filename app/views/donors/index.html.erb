@@ -57,7 +57,11 @@
           <p class="xs visibility epi-4m"> name </p>
         </td>
         <td>
-            <p class=""> <%= donor.bool_donat %></p>
+            <% if donor.bool_donat %>
+              <p class=""> Yes </p>
+            <% else %>
+              <p class=""> No </p>
+            <% end %>
             <p class="xs visibility epi-4m"> plans to give </p>
           </td>
           <td>
@@ -65,11 +69,11 @@
             <p class="xs visibility epi-4m"> propensity </p>
           </td>
           <td>
-            <p class=""> <%= donor.last_donat %></p>
+            <p class=""> <%= donor.last_donat.to_i.floor %></p>
             <p class="xs visibility epi-4m"> recent </p>
           </td>
           <td>
-            <p class=""> <%= donor.lifetime_donat %></p>
+            <p class=""> <%= donor.lifetime_donat.to_i.floor %></p>
             <p class="xs visibility epi-4m"> lifetime</p>
           </td>
           <td>
