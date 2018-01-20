@@ -10,7 +10,7 @@ class DonorsController < ApplicationController
   # GET /kanban
   def kanban
   end
-  
+
   # GET /donors
   # GET /donors.json
   def index
@@ -79,6 +79,6 @@ class DonorsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def donor_params
-      params.require(:donor).permit(:first_name, :last_name, :occupation)
+      params.require(:donor).permit(:first_name, :last_name, :occupation, :college, :major, :street, :city, :state, :zipcode, :lifetime_donat, :last_donat, :events_att, :bool_donat)
     end
 end

@@ -58,23 +58,23 @@
         <%= form.text_field :state, id: :donor_state, class: 'input emb-1 w100p' %>
 
         <%= form.label :zipcode, class: 'xs upcase bld' %>
-        <%= form.text_field :zipcode, id: :donor_zipcode, class: 'input emb-1 w100p' %>
+        <%= form.number_field :zipcode, id: :donor_zipcode, class: 'input emb-1 w100p' %>
       </div>
       <div class="flex panel bb formhead">
         <h6> Contributions Information </h6>
       </div>
       <div>
         <%= form.label 'lifetime giving amount', class: 'xs upcase bld' %>
-        <%= form.text_field :lifetime_donat, id: :donor_lifetime_donat, class: 'input emb-1 w100p' %>
+        <%= form.number_field :lifetime_donat, id: :donor_lifetime_donat, class: 'input emb-1 w100p' %>
 
         <%= form.label 'last giving amount', class: 'xs upcase bld' %>
-        <%= form.text_field :last_donat, id: :donor_last_donat, class: 'input emb-1 w100p' %>
+        <%= form.number_field :last_donat, id: :donor_last_donat, class: 'input emb-1 w100p' %>
 
         <%= form.label 'events attended', class: 'xs upcase bld' %>
-        <%= form.text_field :events_att, id: :donor_events_att, class: 'input emb-1 w100p' %>
+        <%= form.number_field :events_att, id: :donor_events_att, class: 'input emb-1 w100p' %>
 
-        <%= form.label 'planes to gift (Y/N)', class: 'xs upcase bld' %>
-        <%= form.text_field :bool_donat, id: :donor_bool_donat, class: 'input emb-1 w100p' %>
+        <%= form.label 'plans to gift', class: 'xs upcase bld' %>
+        <%= form.check_box :bool_donat, id: :donor_bool_donat, class: 'input emb-1 w100p' %>
       </div>
       <div class="actions">
         <%= form.submit class: 'btn'%>
