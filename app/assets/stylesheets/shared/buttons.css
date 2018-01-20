@@ -1,0 +1,90 @@
+/*** BUTTONS ***/
+/* ============================================================================== */
+/* NOTE: Primary button */
+.btn{
+  background: #FFFEFE;
+  border: solid #645F66 1px;
+  border-radius: 1px;
+  color: #645F66;
+  font-size: 13px;
+  font-stretch: expanded;
+
+  padding: 13px 48px;
+
+  outline: none;
+  text-align: center;
+  text-transform: uppercase;
+}
+.btn:hover{
+  background: #FCA17D;
+  border-color: #FCA17D;
+  color: #FFFEFE;
+  transition: linear 0.2s;
+}
+
+/* NOTE: Icon button */
+.ibtn {
+  background: #FFFEFE;
+  border: solid #645F66 1px;
+  border-radius: 1px;
+  color: #645F66;
+
+  padding: 7px 9.5px;
+  /*margin: 2px 10px;*/
+
+  outline: none;
+  text-align: center;
+}
+.ibtn:hover {
+  background: #FCA17D;
+  border-color: #FCA17D;
+  color: #FFFEFE;
+  transition: linear 0.2s;
+}
+
+/* NOTE: Anchor that looks like a button, is an anchor with a button inside it */
+.abtn{
+  background: transparent;
+  border: none;
+  color: #CAC4CE;
+  font-size: 22px;
+  opacity: 0.7;
+  outline: none;
+  padding: 5px;
+}
+.abtn:hover{
+  color: #FFFEFE;
+  transition: 0.4s;
+}
+.abtn > i{
+  cursor: pointer;
+}
+
+
+/* NOTE: Button in a table */
+.tbtn{}
+.tbtn:hover{}
+
+/* NOTE: Button that looks like a link, but isn't */
+.lbtn{
+  border: none;
+  padding: none;
+  margin: none;
+  outline: none;
+  color: #cac4ce;
+}
+
+.lbtn:hover{
+  color: #2BC3E5;
+  transition: 0.4s;
+}
+
+
+/* NOTE: Button group */
+div.btn-gr > .btn{
+  display: block;
+}
+/* prevent double borders */
+div.btn-gr > .btn:not(:last-child){
+  border-bottom: none;
+}

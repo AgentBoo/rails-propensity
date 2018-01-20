@@ -1,0 +1,35 @@
+#dashbd{
+  display: flex;
+  flex-flow: row wrap;
+}
+
+#dashbd > .grid{
+  flex: 1.61;
+  grid-template-rows: 42vh 30vh;
+  grid-template-columns: repeat(2, 1fr);
+}
+#dashbd > .grid > *{
+  height: 26vh;
+  margin: 0;
+  min-width: 120px;
+}
+#dashbd > .grid > div:first-child{
+  grid-area: 1/1/2/3;
+  height: 38vh;
+}
+
+#dashbd > section{
+  flex: 1;
+}
+
+#mapsection{
+  margin-bottom: 11.767%;
+}
+
+#stats{
+  margin-bottom: 9.767%;
+}
+
+#stats > div.quadruplet > div{
+  text-align: justify;
+}

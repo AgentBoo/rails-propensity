@@ -1,0 +1,175 @@
+/*** App <header>, <main>, <footer>, <aside> rules ***/
+/* ============================================================================== */
+/* NOTE: Classes immediately on body, header, main, footer */
+.body, .header, .main, .footer{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.body{
+  /* background: linear-gradient(to right, #F4f4f0, #eBF1FC); */
+  background: rgba(202, 196, 206, 0.1);
+  color: #645F66;
+  font-family: Helvetica, sans-serif;
+  font-size: 13px;
+}
+
+.header{
+  background: linear-gradient(to right, rgba(255, 254, 254, 1) 51%, rgba(255, 254, 254, 0.8) 86%);
+  position: fixed;
+    top: 0;
+    left: 0;
+  z-index: 30;
+}
+
+.main{}
+
+.footer{
+  background: rgba(255, 254, 254, 0.7);
+  position: relative;
+  z-index: 50;
+ }
+
+
+
+/* NOTE: Immediate inner divs inside header, main, footer */
+.inhead, .inmain, .infoot{
+  /* width of stria */
+  margin: 0 56px;
+}
+
+/* header */
+.inhead > .subpanel > *{
+  margin: 0 46px;
+}
+
+/* main */
+.inmain{
+  box-shadow: inset 0px 0px 5px -1px rgba(202,196,206,1);
+  -moz-box-shadow: inset 0px 0px 5px -1px rgba(202,196,206,1);
+  -webkit-box-shadow: inset 0px 0px 5px -1px rgba(202,196,206,1);
+  color: #001933;
+  /* flex panel senary height */
+  margin-top: 69px;
+  min-height: 568px;
+  /* sidenav + stria = 296px */
+  margin-left: 56px;
+  padding: 2.767% 0;
+  z-index: -10;
+}
+
+/* footer */
+.infoot > .subpanel > *{
+  margin: 0 46px;
+}
+
+
+
+/* NOTE: Immediate inner divs inside <aside> */
+.stria{
+   display: flex;
+     flex-flow: column nowrap;
+     justify-content: flex-start;
+   height: 100%;
+   padding-top: 79px;
+   width: 56px;
+ }
+
+/* LEFT */
+ .stria.sin{
+   align-items: center;
+   background: linear-gradient(rgba(255, 254, 254, 1), rgba(255, 254, 254, 0.8));
+   position: fixed;
+     top: 0;
+     left: 0;
+   z-index: 10;
+ }
+ .stria.sin > .link-btn{
+   margin: 5px 0;
+ }
+
+/* RIGHT */
+ .stria.dex{
+   align-items: center;
+   background: rgba(255, 254, 254, 0.7);
+   padding-top: 155px;
+   position: fixed;
+     top: 0;
+     right: 0;
+   z-index: 40;
+ }
+ .stria.dex > .link{
+   color: #645F66;
+   margin: 5px 0;
+   padding: 16px 8px 10px 10px;
+   position: relative;
+     right: 5px;
+   text-align: right;
+   width: 100%;
+ }
+ .stria.dex > .link:hover{
+   /* #cac4ce */
+   background: rgba(202, 196, 206, 0.6);
+   color: #FFFEFE;
+   transition: 0.6s;
+ }
+
+
+
+ /* NOTE: Search bar */
+ #search{
+   background: #fffefe;
+   border: solid #cac4ce 1px;
+   border-radius: 2px;
+   display: flex;
+ }
+ #search > input{
+   border: none;
+   outline: none;
+   padding-left: 18px;
+   width: 22vw;
+ }
+ #search > button{
+   border: none;
+   font-size: 14px;
+   outline: none;
+   padding: 6px 18px;
+
+ }
+ #search > button:hover{
+   color: #fffefe;
+   background: #FCA17D;
+   transition: 0.4s;
+ }
+
+
+
+ /* NOTE: Sidenav */
+ .sidenav{
+   background: #fff;
+   border-left: solid #cac4ce 1px;
+   box-sizing:border-box;
+   height: 100%;
+   overflow-x: hidden;
+   /* overflow-y: scroll; */
+   padding-top: 108px;
+   position: fixed;
+     top: 0;
+     /* width of stria */
+     left: 56px;
+   width: 0;
+   z-index: 20;
+ }
+.sidenav a{
+  display: block;
+  position: relative;
+  width: 100%;
+}
+.sidenav a:first-child{
+  margin: 0 22px 21px;
+}
+.sidenav a:not(:first-child){
+  margin: 21px 22px;
+}

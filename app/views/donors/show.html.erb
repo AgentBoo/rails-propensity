@@ -1,0 +1,118 @@
+  <p id="notice"><%= notice %></p>
+
+      <div class="flex panel pghead mgn-xy">
+          <h1 class="indiv-pg-fullname">
+            <%= @donor.first_name %> <%= @donor.last_name %>
+          </h1>
+          <%= link_to 'Edit', edit_donor_path(@donor), class: 'link underline upcase' %>
+          <%= link_to 'Back', donors_path, class: 'link underline upcase' %>
+        </div>
+
+
+        <!-- demo section -->
+        <section id="indiv-display-section" class="mgn-xy">
+          <div id="L-side-wrapper" class="grid">
+            <section id="L-top-section-quickstats" class="bt">
+              <h1 class="xxl"> 23a </h1>
+              <h5>
+                Occupation:
+                <%= @donor.occupation %>
+              </h5>
+            </section>
+
+            <section id="L-top-section-quicknotes" class="bt">
+              <h5> Notes </h5>
+              <p>
+                Lorem ipsum dolor sit amet, errem temporibus id vis, corpora
+                philosophia at eos. Ius ex fuisset atomorum neglegentur, at
+                qui mutat argumentum, eu enim posse eum. Usu nihil audire ad,
+                probo dolor efficiendi in mel, ius equidem fabellas at.
+                Nostrum temporibus eloquentiam cum an.
+              </p>
+              <div id="ctn-test-a" class="ctn-test ctn inset"></div>
+              <h5> Graph A </h5>
+            </section>
+
+            <section id="L-bot-section-notes" class="grid bt">
+              <h5> Notes 1 </h5>
+              <p>
+                Lorem ipsum dolor sit amet, errem temporibus id vis, corpora
+                philosophia at eos. Ius ex fuisset atomorum neglegentur, at
+                qui mutat argumentum, eu enim posse eum. Usu nihil audire ad,
+                probo dolor efficiendi in mel, ius equidem fabellas at.
+                Nostrum temporibus eloquentiam cum an.
+              </p>
+              <h5> Notes 2 </h5>
+              <p>
+                Lorem ipsum dolor sit amet, errem temporibus id vis, corpora
+                philosophia at eos. Ius ex fuisset atomorum neglegentur, at
+                qui mutat argumentum, eu enim posse eum. Usu nihil audire ad,
+                probo dolor efficiendi in mel, ius equidem fabellas at.
+                Nostrum temporibus eloquentiam cum an.
+              </p>
+              <h5> Notes 3 </h5>
+              <p>
+                Lorem ipsum dolor sit amet, errem temporibus id vis, corpora
+                philosophia at eos. Ius ex fuisset atomorum neglegentur, at
+                qui mutat argumentum, eu enim posse eum. Usu nihil audire ad,
+                probo dolor efficiendi in mel, ius equidem fabellas at.
+                Nostrum temporibus eloquentiam cum an.
+              </p>
+            </section>
+
+          <!-- end of L side wrapper -->
+          </div>
+
+          <div id="R-side-wrapper">
+            <section id="R-section-stats" class="grid bt">
+              <h5> Graph 1 </h5>
+              <div id="ctn-test-b" class="ctn-test ctn inset"></div>
+              <h5 class="bt"> Graph 2 </h5>
+              <div class="ctn-test ctn inset"></div>
+              <h5 class="bt"> Graph 3 </h5>
+              <div class="ctn-test ctn inset"></div>
+            </section>
+          </div>
+        </section>
+
+        <!-- tables section -->
+        <section></section>
+        <!-- editable section -->
+        <section></section>
+
+
+        <div class="mgn-xy bt">
+          <button type="button" class="btn-i">
+            <i class="fa fa-plus" aria-hidden="true"></i>
+          </button>
+          Add event
+          <table id="tevents" class="">
+            <tbody>
+              <tr>
+                <th>
+                  Date
+                  <i class="fa fa-chevron-down" aria-hidden="true"></i>
+                </th>
+                <th>
+                  Event
+                  <i class="fa fa-chevron-down" aria-hidden="true"></i>
+                </th>
+                <th> Address </th>
+                <th></th>
+              </tr>
+              <tr>
+                <td class="">
+                  <h5> 3/4/18 </h5>
+                </td>
+                <td class="">
+                  <h5> Lorem ipsum </h5>
+                  <p class="xs"> Lorem ipsum </p>
+                </td>
+                <td> Lorem Ipsum 000, AB 11122 </td>
+                <td><button type="button"> x </button></td>
+              </tr>
+            <tbody>
+          </table>
+        </div>
+
+        <%= render 'form', donor: @donor %>

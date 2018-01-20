@@ -1,0 +1,51 @@
+<section id="" class="mgn-xy">
+  <!-- postcard section -->
+  <%= form_with(model: donor, local: true, class: 'flex postcard pad-x bt form-donor') do |form| %>
+    <% if donor.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(donor.errors.count, "error") %> prohibited this donor from being saved:</h2>
+
+        <ul>
+        <% donor.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+  <!-- <form class="flex postcard pad-x bt form-donor"> -->
+    <div id="" class="flex postcard-side dex pad-xy">
+      <div class="flex panel bb formhead">
+        <h6> Occupation </h6>
+      </div>
+      <div class="">
+        <%= form.label :occupation, class: 'xs upcase bld' %><br>
+        <%= form.text_field :occupation, id: :donor_occupation, class: 'input emb-1 w100p' %>
+      </div>
+      <div class="flex panel formhead">
+        <h6> Education </h6>
+      </div>
+      <div class="">
+      </div>
+    </div>
+
+    <div class="postcardese pad-xy">
+      <div class="flex panel bb formhead">
+        <h6> Personal Information </h6>
+      </div>
+      <div class="">
+        <%= form.label :first_name, class: 'xs upcase bld' %>
+        <%= form.text_field :first_name, id: :donor_first_name, class:'input emb-1 w100p' %>
+
+        <%= form.label :last_name, class: 'xs upcase bld' %>
+        <%= form.text_field :last_name, id: :donor_last_name, class: 'input emb-1 w100p' %>
+      </div>
+      <div class="actions">
+        <%= form.submit class: 'btn'%>
+      </div>
+    <!-- end of postcardese -->
+    </div>
+  <!-- end of postcard -->
+<% end %>
+  <!-- </form> -->
+</section>

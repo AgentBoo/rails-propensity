@@ -1,0 +1,19 @@
+.positive{
+  color: #FCA17D;
+}
+
+.negative{
+  color: #EDECEE;
+}
+
+.visibility{
+  display: none;
+}
+
+.w100p{
+  width: 100%;
+}
+
+.w50p{
+  width: 100%;
+}

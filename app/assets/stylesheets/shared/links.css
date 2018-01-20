@@ -1,0 +1,44 @@
+/*** LINKS ***/
+/* ============================================================================== */
+/* NOTE: Links */
+.link{
+  color: #CAC4CE;
+  cursor: pointer;
+}
+.link:hover{
+  color: #2BC3E5;
+  transition: 0.4s;
+}
+
+.link_{
+  color: #CAC4CE;
+  border-bottom: solid #cac4ce 1px;
+  padding-bottom: 3px;
+}
+.link_:hover{
+  color: #2BC3E5;
+  transition: 0.4s;
+}
+
+.link-btn{
+  box-sizing: border-box;
+  cursor: pointer;
+  padding: 13px 0 13px 6px;
+  text-align: center;
+  width: 100%;
+}
+.link-btn:hover{
+  background: rgba(252, 161, 125, 1);
+  transition: 0.4s;
+}
+
+/* embelishments */
+.link.emb-1{
+  color: #645F66;
+  font-weight: bold;
+}
+
+.link.emb-1:hover{
+  color: #FCA17D;
+  transition: 0.4s;
+}

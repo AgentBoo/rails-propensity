@@ -5,10 +5,39 @@
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <!-- <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %> -->
+    <%= javascript_pack_tag 'hello_react' %>
+    <%# Font awesome CDN %>
+    <script src="https://use.fontawesome.com/43adbb1640.js"></script>
   </head>
 
-  <body>
-    <%= yield %>
+
+  <body class="body">
+    <header class="header">
+      <%= render partial: 'layouts/shared/header' %>
+    </header>
+
+    <aside>
+    <%= render partial: 'layouts/shared/left_sidepanel' %>
+    </aside>
+
+    <%# MAIN IS YIELD SECTION %>
+    <main class="main">
+      <%= render partial: 'layouts/shared/sidenav' %>
+      <div class="inmain">
+        <%= yield %>
+      </div>
+    </main>
+
+    <aside>
+    <%= render partial: 'layouts/shared/right_sidepanel' %>
+    </aside>
+
+    <footer class="footer">
+      <%= render partial: 'layouts/shared/footer' %>
+    </footer>
+
+    <%= yield :gmapsjs %>
+    <%= javascript_include_tag 'effects' %>
   </body>
 </html>

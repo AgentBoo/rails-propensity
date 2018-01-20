@@ -1,0 +1,53 @@
+<section id="cardview" class="mgn-xy">
+          <div class="grid cardpexeso">
+            <% @donors.each do |donor| %>
+            <div class="grid card">
+              <div class="top-L subcard">
+                <p class="xxs"> contacted </p>
+                <i class="fa fa-check indicator-lg" aria-hidden="true"></i>
+                <p class="xxs"> will donate </p>
+                <i class="fa fa-thumbs-up indicator-lg" aria-hidden="true"></i>
+              </div>
+              <div class="top-M subcard">
+                <%= link_to donor, class: 'link' do %>
+                  <h2>
+                    <%= donor.first_name %> <%= donor.last_name %>
+                  </h2>
+                <% end %>
+
+                <div class="flex">
+                  <div>
+                    <h3 class=""> $200 </h3>
+                    <p class="xs epi-4m"> recent</p>
+                  </div>
+                  <div>
+                    <h3 class=""> $5000 </h3>
+                    <p class="xs epi-4m"> lifetime </p>
+                  </div>
+                </div>
+
+              </div>
+              <div class="bot-M subcard flex">
+                <div>
+                  <h3 class=""> 3 </h3>
+                  <p class="xs epi-4m"> events </p>
+                </div>
+                <div>
+                  <h3 class=""> 23 </h3>
+                  <p class="xs epi-4m"> propensity </p>
+                </div>
+              </div>
+              <div class="bot-L subcard">
+                <i class="fa fa-envelope-o fa-fw indicator-sm" aria-hidden="true"></i>
+                <i class="fa fa-phone fa-fw indicator-sm" aria-hidden="true"></i>
+              </div>
+
+              <div class="topbot-R subcard">
+                <!-- <i class="fa fa-fw fa-female indicator-lg" aria-hidden="true"></i></div> -->
+              </div>
+
+            </div>
+            <% end %>
+
+          </div>
+        </section>

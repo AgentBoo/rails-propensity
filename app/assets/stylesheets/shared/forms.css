@@ -1,0 +1,52 @@
+form.form-center{}
+
+/* RENAME TO form-postcard_donor */
+form.form-donor{
+  padding-top: 3.8em;
+  margin-bottom: 11vh;
+  padding-bottom: 11vh;
+}
+
+form.form-donor > .postcard-side.dex{
+  margin-left: 46px;
+}
+
+form.form-donor > .postcard-side.dex > *:not(:first-child){
+  padding: 1.8em 0 0;
+  width: 100%;
+}
+form.form-donor > .postcardese > *:not(:first-child){
+  padding: 1.8em 0 0;
+  width: 100%;
+}
+
+
+form.form-auth{
+
+}
+
+
+.input{
+  outline: none;
+}
+
+.input.emb-1{
+  border: solid #fff 1px;
+  border-bottom: solid red 1px;
+  border-radius: 2px;
+  margin: 1em 0;
+  padding: 0.8em 1px;
+}
+.input.emb-1:hover{
+  border: solid 1px blue;
+}
+.input.emb-1:focus{
+  border: solid 1px blue;
+}
+
+
+
+
+
+/*===============================================================================*/
+/* MIDSECTION - TABLES */

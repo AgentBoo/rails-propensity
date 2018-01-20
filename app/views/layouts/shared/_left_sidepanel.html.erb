@@ -1,0 +1,28 @@
+<%# Left slim asidepanel inside <aside> %>
+
+<%# start .stria sin  %>
+<div class="stria sin">
+  <a href="#" class="link-btn"><button class="abtn openBtn"><i class="fa fa-bars" aria-hidden="true"></i></button></a>
+
+  <%= link_to donors_path, class: 'link-btn' do %>
+    <button class="abtn">
+      <i class="fa fa-users" aria-hidden="true"></i>
+    </button>
+  <% end %>
+
+  <%= link_to new_donor_path, class: 'link-btn' do %>
+    <button class="abtn">
+      <i class="fa fa-user-plus" aria-hidden="true"></i>
+    </button>
+  <% end %>
+
+  <!-- <a href="#" class="link-btn"><button class="abtn"><i class="fa fa-address-book"></i></button></a> -->
+
+  <%= link_to root_path, class: 'link-btn' do %>
+    <button class="abtn">
+      <i class="fa fa-home"></i>
+    </button>
+  <% end %>
+
+<%# end .stria sin  %>
+</div>

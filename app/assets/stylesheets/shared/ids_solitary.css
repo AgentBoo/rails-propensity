@@ -1,0 +1,15 @@
+/* ============================================================================== */
+/* NOTE: Header, footer, sidepanels */
+#sitename{
+  border-left: solid 4px #FCA17D;
+  color: #2BC3E5;
+  padding-left: 8px;
+  position: relative;
+    top: 0;
+    left: -46px;
+}
+
+
+#user{
+  color: #001933;
+}

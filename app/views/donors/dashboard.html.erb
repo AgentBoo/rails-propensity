@@ -1,0 +1,113 @@
+<%# RIGHT SIDEPANEL yield :right_aside to content_for :right_aside %>
+<% content_for :right_aside do %>
+    <%= link_to 'Map', root_path, class: "xs link ver-1"%>
+    <%= link_to 'Kanban', kanban_path, class: "xs link ver-1"%>
+<% end %>
+
+
+<%# MAIN inside .inmain %>
+<!-- page title -->
+<!-- <div class="flex panel tertiary bb pad-x mgn-xy"> -->
+  <h1 class="title-page mgn-xy bb"> Dashboard </h1>
+<!-- </div> -->
+
+<!-- map section -->
+<section id="mapsection" class="mgn-xy">
+  <div id="map" class="ctn-map outline">
+  </div>
+  <div class="grid panel">
+    <p class="xs"> This map has been centered at Pearings, Indianapolis, IN </p>
+  </div>
+<!-- end of map section -->
+</section>
+
+<!-- primary dashbd section -->
+<section id="dashbd">
+  <div class="grid ctn mgn-xy">
+    <div class="ctn portrait"></div>
+    <div class="ctn portrait"></div>
+    <div class="ctn portrait"></div>
+  </div>
+
+  <!-- map section -->
+  <section id="" class="mgn-xy">
+    <div id="" class="ctn portrait ctn-placeholder">
+    </div>
+  <!-- end of map section -->
+  </section>
+<!-- end of dashbd section -->
+</section>
+
+
+<div id="review" class="flex panel tertiary bb pad-x">
+  <h2> Review </h2>
+</div>
+
+<!-- review section -->
+<section id="statsection" class="mgn-xy">
+  <div class="grid quadruplet">
+    <div class="">
+      <div class="flex panel tertiary bb">
+        <h3> 30 new donations </h3>
+      </div>
+      <p>
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+        sed do eiusmod tempor incididunt ut labore et dolore magna
+        aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+        ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        Duis aute irure dolor in reprehenderit in voluptate velit esse
+        cillum dolore eu fugiat nulla pariatur.
+      </p>
+    </div>
+
+    <div class="">
+      <div class="flex panel tertiary bb">
+        <h3> 5 upcoming events </h3>
+      </div>
+      <p>
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+        sed do eiusmod tempor incididunt ut labore et dolore magna
+        aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+        ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        Duis aute irure dolor in reprehenderit in voluptate velit esse
+        cillum dolore eu fugiat nulla pariatur.
+      </p>
+    </div>
+
+    <div class="">
+      <div class="flex panel tertiary bb">
+        <h3> Lorem Ipsum </h3>
+      </div>
+      <p>
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+        sed do eiusmod tempor incididunt ut labore et dolore magna
+        aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+        ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        Duis aute irure dolor in reprehenderit in voluptate velit esse
+        cillum dolore eu fugiat nulla pariatur.
+      </p>
+    </div>
+
+    <div class="">
+      <div class="flex panel tertiary bb">
+        <h3> Lorem Ipsum </h3>
+      </div>
+      <p>
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+        sed do eiusmod tempor incididunt ut labore et dolore magna
+        aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+        ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        Duis aute irure dolor in reprehenderit in voluptate velit esse
+        cillum dolore eu fugiat nulla pariatur.
+      </p>
+    </div>
+
+  </div>
+<!-- end of review section -->
+</section>
+
+<% content_for :gmapsjs do %>
+  <%= javascript_include_tag 'maps', 'data-turbolinks-track': 'false' %>
+  <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCzsjRpp3p7GDIDf3MrFp0ny7LnxaKEizc&callback=initMap"></script>
+<% end %>

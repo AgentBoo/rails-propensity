@@ -1,0 +1,75 @@
+#propensity{
+  color: #0DC0D8;
+  font-size: 40px;
+  margin: 20px;
+}
+
+#login-body{
+  background: linear-gradient(#ffffff,#f7fcff, #f9f9f5 59.2%, #dcf0fa);
+}
+
+/* TOP SECTION*/
+#topsection{
+  box-sizing: border-box;
+  flex-flow: row wrap;
+  padding: 34vh 7vw;
+    top: 30vh;
+  /* padding + margin have to add up to 10vw   */
+  border-bottom: solid #141B41 2px;
+  margin: 0 5vw;
+}
+
+#topsection > #propensity{
+  flex: 1.61;
+}
+#topsection > div{
+  flex: 1;
+  margin: 3vh 0;
+  text-align: justify;
+}
+
+#topsection .flex > .btn{
+  align-self: center;
+  margin-right: 18px;
+}
+
+#topsection .flex > .link{
+  align-self: center;
+  position: relative;
+    bottom: 2px;
+}
+
+/* BOTTOM SECTION */
+#bottomsection{
+  /*background: #f7f4f4;*/
+  box-sizing: border-box;
+  min-height: 108vh;
+}
+
+#bottomsection .btn{
+  margin: 1em 0 1.8em;
+}
+
+.ctn-focal{
+  padding-top: 0;
+}
+.ctn-focal > .panel.tertiary > .lbtn{
+  position: relative;
+    top: 1.4em;
+}
+.ctn-focal > div:not(:first-child){
+  padding-top: 53px;
+}
+
+.panel.tertiary > .lbtn{
+  margin-right: 34px;
+}
+
+#authforms{
+  position: relative;
+    top: 100px;
+}
+
+#signup{
+  display: none;
+}
