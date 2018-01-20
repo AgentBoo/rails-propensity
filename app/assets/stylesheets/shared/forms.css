@@ -32,16 +32,16 @@ form.form-auth{
 
 .input.emb-1{
   border: solid #fff 1px;
-  border-bottom: solid red 1px;
+  border-bottom: solid #EDECEE 1px;
   border-radius: 2px;
   margin: 1em 0;
   padding: 0.8em 1px;
 }
 .input.emb-1:hover{
-  border: solid 1px blue;
+  border: solid 1px #2BC3E5;
 }
 .input.emb-1:focus{
-  border: solid 1px blue;
+  border: solid 1px #2BC3E5;
 }
 
 

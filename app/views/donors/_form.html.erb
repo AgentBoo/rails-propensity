@@ -26,6 +26,14 @@
         <h6> Education </h6>
       </div>
       <div class="">
+        <%= form.label :college, class: 'xs upcase bld' %><br>
+        <%= form.text_field :college, id: :donor_college, class: 'input emb-1 w100p' %>
+      </div>
+      <div class="">
+        <%= form.label :major, class: 'xs upcase bld' %><br>
+        <%= form.text_field :major, id: :donor_major, class: 'input emb-1 w100p' %>
+      </div>
+      <div class="">
       </div>
     </div>
 
@@ -39,6 +47,34 @@
 
         <%= form.label :last_name, class: 'xs upcase bld' %>
         <%= form.text_field :last_name, id: :donor_last_name, class: 'input emb-1 w100p' %>
+
+        <%= form.label :street, class: 'xs upcase bld' %>
+        <%= form.text_field :street, id: :donor_street, class: 'input emb-1 w100p' %>
+
+        <%= form.label :city, class: 'xs upcase bld' %>
+        <%= form.text_field :city, id: :donor_city, class: 'input emb-1 w100p' %>
+
+        <%= form.label :state, class: 'xs upcase bld' %>
+        <%= form.text_field :state, id: :donor_state, class: 'input emb-1 w100p' %>
+
+        <%= form.label :zipcode, class: 'xs upcase bld' %>
+        <%= form.text_field :zipcode, id: :donor_zipcode, class: 'input emb-1 w100p' %>
+      </div>
+      <div class="flex panel bb formhead">
+        <h6> Contributions Information </h6>
+      </div>
+      <div>
+        <%= form.label 'lifetime giving amount', class: 'xs upcase bld' %>
+        <%= form.text_field :lifetime_donat, id: :donor_lifetime_donat, class: 'input emb-1 w100p' %>
+
+        <%= form.label 'last giving amount', class: 'xs upcase bld' %>
+        <%= form.text_field :last_donat, id: :donor_last_donat, class: 'input emb-1 w100p' %>
+
+        <%= form.label 'events attended', class: 'xs upcase bld' %>
+        <%= form.text_field :events_att, id: :donor_events_att, class: 'input emb-1 w100p' %>
+
+        <%= form.label 'planes to gift (Y/N)', class: 'xs upcase bld' %>
+        <%= form.text_field :bool_donat, id: :donor_bool_donat, class: 'input emb-1 w100p' %>
       </div>
       <div class="actions">
         <%= form.submit class: 'btn'%>

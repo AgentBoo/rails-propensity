@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180113001634) do
+ActiveRecord::Schema.define(version: 20180120174114) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -21,6 +21,17 @@ ActiveRecord::Schema.define(version: 20180113001634) do
     t.string "occupation"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "street"
+    t.string "city"
+    t.string "state"
+    t.integer "zipcode"
+    t.decimal "lifetime_donat", precision: 5, scale: 2
+    t.decimal "last_donat", precision: 5, scale: 2
+    t.integer "events_att"
+    t.string "college"
+    t.string "major"
+    t.decimal "planned_donat", precision: 5, scale: 2
+    t.boolean "bool_donat"
   end
 
 end

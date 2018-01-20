@@ -18,6 +18,27 @@
                 Occupation:
                 <%= @donor.occupation %>
               </h5>
+              <h5>
+                Address:
+                <%= @donor.street %>, <%= @donor.city %>, <%= @donor.state %> <%= @donor.zipcode %>
+              </h5>
+              <h5>
+                Lifetime giving amount:
+                <%= @donor.lifetime_donat %>
+              </h5>
+              <h5>
+                Last giving amount:
+                <%= @donor.last_donat %>
+              </h5>
+              <h5>
+                College:
+                <%= @donor.college %>
+              </h5>
+              <h5>
+                Major:
+                <%= @donor.major %>
+              </h5>
+
             </section>
 
             <section id="L-top-section-quicknotes" class="bt">

@@ -57,23 +57,23 @@
           <p class="xs visibility epi-4m"> name </p>
         </td>
         <td>
-            <p class=""> Yes </p>
+            <p class=""> <%= donor.bool_donat %></p>
             <p class="xs visibility epi-4m"> plans to give </p>
           </td>
           <td>
-            <p class=""> 23 </p>
+            <p class=""> 1 </p>
             <p class="xs visibility epi-4m"> propensity </p>
           </td>
           <td>
-            <p class=""> $200 </p>
-            <p class="xs visibility epi-4m"> last gift </p>
+            <p class=""> <%= donor.last_donat %></p>
+            <p class="xs visibility epi-4m"> recent </p>
           </td>
           <td>
-            <p class=""> $500000</p>
-            <p class="xs visibility epi-4m"> lifetime gift </p>
+            <p class=""> <%= donor.lifetime_donat %></p>
+            <p class="xs visibility epi-4m"> lifetime</p>
           </td>
           <td>
-            <p class=""> 3 </p>
+            <p class=""> <%= donor.events_att %></p>
             <p class="xs visibility epi-4m"> events </p>
           </td>
       </tr>
