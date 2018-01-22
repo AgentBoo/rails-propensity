@@ -2,19 +2,23 @@
 // https://www.w3schools.com/howto/howto_js_sidenav.asp
 
 const openBtn = document.querySelector('.openBtn')
-const closeBtn = document.querySelector('.closeBtn')
-const sidenav = document.querySelector('.sidenav')
+const sidenav = document.querySelector('#js-sidenav')
 const inmain = document.querySelector('.inmain')
 
 
 openBtn.addEventListener('click', function(_event){
-  sidenav.style.width = '240px'
-  inmain.style.marginLeft = '296px'
-})
-
-closeBtn.addEventListener('click', function(_event){
-  sidenav.style.width = "0"
-  inmain.style.marginLeft = '56px'
+  console.log(sidenav.style.width)
+  if(sidenav.style.width){
+    openBtn.parentNode.style.background = '#fff'
+    openBtn.style.color = '#cac4ce'
+    sidenav.style.width = ''
+    inmain.style.marginLeft = '56px'
+  } else {
+    openBtn.parentNode.style.background = '#FCA17D'
+    openBtn.style.color = '#fff'
+    sidenav.style.width = '240px'
+    inmain.style.marginLeft = '296px'
+  }
 })
 
 function switching(){
