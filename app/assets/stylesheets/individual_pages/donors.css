@@ -61,3 +61,11 @@ div#control_pane-filter > div.subctg > label{
 div#control_pane-filter > div.subctg > input{
   margin-bottom: 1em;
 }
+
+
+section#cardview{
+  /* grey 2 */
+  border-top: solid #C5CBD3 2px;
+  border-bottom: solid #C5CBD3 2px;
+  padding: 69px 0;
+}

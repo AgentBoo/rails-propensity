@@ -162,23 +162,23 @@ a#sitename{
 /* ==================================== */
  /* NOTE: Sidebar nav */
 nav.sidenav{
-  background: #1A535C;
-  height: 100%;
+  /* background: #1A535C; */
+  /* height: 100%; */
   /* opacity: 0.2; */
-  overflow-x: hidden;
-  padding-top: calc(3em + 20.5px + 69px);
-  position: fixed;
-   top: 0;
+  /* overflow-x: hidden; */
+  /* padding-top: calc(3em + 20.5px + 69px); */
+  /* position: fixed; */
+   /* top: 0; */
    /* width of aside */
-   left: 56px;
-  transition: 0.3s linear;
+   /* left: 56px; */
+  /* transition: 0.3s linear; */
   /* width will be 240px */
-  width: 0;
-  z-index: 10;
+  /* width: 0; */
+  /* z-index: 10; */
 }
 nav.sidenav > *{
-  display: block;
-  position: relative;
+  /* display: block; */
+  /* position: relative; */
 }
 nav.sidenav > a.link:first-child{
   /* margin: 0 22px 26px; */

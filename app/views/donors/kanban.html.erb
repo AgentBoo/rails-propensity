@@ -1,12 +1,14 @@
 <%# RIGHT SIDEPANEL yield :right_aside to content_for :right_aside %>
 <% content_for :right_aside do %>
-    <%= link_to 'Map', root_path, class: "xs link ver-1"%>
-    <%= link_to 'Kanban', kanban_path, class: "xs link ver-1"%>
 <% end %>
 
 
 <%# MAIN inside .inmain %>
-<h1 class="title-page mgn-xy bb"> Kanban board </h1>
+<div class="flex xpanel pghead mgn-x">
+  <p class="xl"> Kanban board </p>
+  <%= link_to 'Map', root_path, class: 'link upcase' %>
+  <%= link_to 'Kanban', kanban_path, class: 'link upcase' %>
+</div>
 <section id="" class="mgn-xy">
   <div id="react" class="">
   </div>

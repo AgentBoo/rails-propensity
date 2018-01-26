@@ -39,7 +39,7 @@
             <%= donor.last_name %> <%= donor.first_name %>
           <% end %>
         <% end %>
-        <p class="xs not-visible epi-4m"> name </p>
+        <p class="xs invisible epi-4m"> name </p>
       </td>
       <td>
         <% if donor.bool_donat %>
@@ -47,23 +47,23 @@
         <% else %>
           <p class="l"> <i class="fa fa-times is-negative" aria-hidden="true"></i></p>
         <% end %>
-        <p class="xs not-visible epi-4m"> plans to give </p>
+        <p class="xs invisible epi-4m"> plans to give </p>
       </td>
       <td>
         <p class=""> 1 </p>
-        <p class="xs not-visible epi-4m"> propensity </p>
+        <p class="xs invisible epi-4m"> propensity </p>
       </td>
       <td>
         <p class=""> $<%= donor.last_donat.to_i.floor %></p>
-        <p class="xs not-visible epi-4m"> last gift </p>
+        <p class="xs invisible epi-4m"> last gift </p>
       </td>
       <td>
         <p class="">$<%= donor.lifetime_donat.to_i.floor %></p>
-        <p class="xs not-visible epi-4m"> lifetime gift </p>
+        <p class="xs invisible epi-4m"> lifetime gift </p>
       </td>
       <td>
         <p class=""><%= donor.events_att %></p>
-        <p class="xs not-visible epi-4m"> events </p>
+        <p class="xs invisible epi-4m"> events </p>
       </td>
     </tr>
     <% end %>
