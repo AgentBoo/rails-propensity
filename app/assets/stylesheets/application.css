@@ -198,10 +198,10 @@
    position: relative;
  }
  nav.sidenav > a.link:first-child{
-   margin: 0 22px 26px;
+   /* margin: 0 22px 26px; */
  }
  nav.sidenav > a.link:not(:first-child){
-   margin: 26px 22px;
+   /* margin: 26px 22px; */
  }
 
  /* NOTE: Search bar */
