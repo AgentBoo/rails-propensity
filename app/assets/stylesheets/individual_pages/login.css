@@ -1,0 +1,82 @@
+/*** LOGIN PAGE SPECIFIC  ***/
+/* =============================================================================== */
+h1#propensity{
+  color: #0DC0D8;
+  font-size: 40px;
+  margin: 20px;
+}
+
+body#login-body{
+  background: linear-gradient(#ffffff,#f7fcff, #f9f9f5 59.2%, #dcf0fa);
+}
+
+/* NOTE: Top section */
+#topsection{
+  box-sizing: border-box;
+  flex-flow: row wrap;
+  padding: 18em 0 13em;
+  /* padding + margin have to add up to 10vw   */
+  border-bottom: solid #141B41 2px;
+  margin: 0 10vw;
+}
+
+#topsection > h1#propensity{
+  flex: 1.61;
+}
+
+#topsection > div#memo{
+  flex: 1;
+  margin: 1.98em 0;
+  text-align: justify;
+}
+
+#topsection > div#memo > p{
+  margin-bottom: 1.61em;
+}
+
+#topsection div.flex > .btn{
+  align-self: center;
+  margin-right: 4vw;
+}
+
+#topsection div.flex > .link{
+  align-self: center;
+  position: relative;
+    bottom: 2px;
+}
+
+
+/* BOTTOM SECTION */
+#bottomsection{
+  /*background: #f7f4f4;*/
+  box-sizing: border-box;
+  min-height: 108vh;
+}
+
+#bottomsection > div:first-child{
+  position: relative;
+    top: 100px;
+}
+
+#bottomsection div.ctn.focal > div.xpanel > .lbtn{
+  margin-right: 34px;
+  position: relative;
+    top: 1.2em;
+}
+
+#bottomsection div.ctn.focal > div.authctn{
+  padding-top: 57px;
+}
+
+/* there is only 1 <p> in the div.authctn */
+#bottomsection div.authctn > p{
+  margin-bottom: 1.4em;
+}
+
+#bottomsection form > .btn{
+  margin: 1em 0 1.8em;
+}
+
+#signup{
+  display: none;
+}
