@@ -1,0 +1,72 @@
+<%# start tdonors table %>
+<table id="tdonors_all">
+  <thead>
+    <tr>
+      <th>
+        Name
+        <i class="fa fa-chevron-down" aria-hidden="true"></i>
+      </th>
+      <th>
+        Plans to gift
+        <i class="fa fa-chevron-down" aria-hidden="true"></i>
+      </th>
+      <th>
+        Propensity
+        <i class="fa fa-chevron-down" aria-hidden="true"></i>
+      </th>
+      <th>
+        Last gift
+        <i class="fa fa-chevron-down" aria-hidden="true"></i>
+      </th>
+      <th>
+        Lifetime gift
+        <i class="fa fa-chevron-down" aria-hidden="true"></i>
+      </th>
+      <th>
+        Events
+        <i class="fa fa-chevron-down" aria-hidden="true"></i>
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @donors.each do |donor| %>
+    <tr>
+      <td>
+        <%= link_to donor, class: 'link decor-3' do %>
+          <% if donor.last_name.blank? && donor.first_name.blank? %>
+            Anonymous
+          <% else %>
+            <%= donor.last_name %> <%= donor.first_name %>
+          <% end %>
+        <% end %>
+        <p class="xs not-visible epi-4m"> name </p>
+      </td>
+      <td>
+        <% if donor.bool_donat %>
+          <p class="l"> <i class="fa fa-check is-positive" aria-hidden="true"></i></p>
+        <% else %>
+          <p class="l"> <i class="fa fa-times is-negative" aria-hidden="true"></i></p>
+        <% end %>
+        <p class="xs not-visible epi-4m"> plans to give </p>
+      </td>
+      <td>
+        <p class=""> 1 </p>
+        <p class="xs not-visible epi-4m"> propensity </p>
+      </td>
+      <td>
+        <p class=""> $<%= donor.last_donat.to_i.floor %></p>
+        <p class="xs not-visible epi-4m"> last gift </p>
+      </td>
+      <td>
+        <p class="">$<%= donor.lifetime_donat.to_i.floor %></p>
+        <p class="xs not-visible epi-4m"> lifetime gift </p>
+      </td>
+      <td>
+        <p class=""><%= donor.events_att %></p>
+        <p class="xs not-visible epi-4m"> events </p>
+      </td>
+    </tr>
+    <% end %>
+  </tbody>
+<%# end tdonors table %>
+</table>

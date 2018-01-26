@@ -1,92 +1,59 @@
 <%# RIGHT SIDEPANEL yield :right_aside to content_for :right_aside %>
 
 <% content_for :right_aside do %>
-    <a href="#" class="xs upcase bld link ver-1 js-switch-a"> Table </a>
-    <a href="#" class="xs upcase bld link ver-1 js-switch-b"> Cards </a>
 <% end %>
 
 <%# MAIN inside .inmain %>
-<div class="flex panel pghead mgn-x">
-    <h1 class="indiv-pg-fullname">
-      All donors
-    </h1>
-    <a href="#" class="link ver-1 js-switch-a upcase"> Table </a>
-    <a href="#" class="link ver-1 js-switch-b upcase"> Cards </a>
+<div class="flex xpanel pghead mgn-xy">
+    <p class="xl"> Donors registry </p>
+    <a class="link decor-1 js-switch-a"> Table </a>
+    <a class="link decor-1 js-switch-b"> Cards </a>
 </div>
 
-<div class="mgn-xy js-switchable-a">
-  <table id="tdonors-all">
-    <thead>
-      <tr>
-      <th>
-        Name
-        <i class="fa fa-chevron-down" aria-hidden="true"></i>
-      </th>
-      <th>
-        Plans to gift
-        <i class="fa fa-chevron-down" aria-hidden="true"></i>
-      </th>
-      <th>
-        Propensity
-        <i class="fa fa-chevron-down" aria-hidden="true"></i>
-      </th>
-      <th>
-        Last gift
-        <i class="fa fa-chevron-down" aria-hidden="true"></i>
-      </th>
-      <th>
-        Lifetime gift
-        <i class="fa fa-chevron-down" aria-hidden="true"></i>
-      </th>
-      <th>
-        Events
-        <i class="fa fa-chevron-down" aria-hidden="true"></i>
-      </th>
-    </tr>
-    </thead>
+<!-- Control panel -->
+<section id="control_pane" class="mgn-x">
+  <div class="flex xpanel bb">
+    <button class="m lbtn is-underlined"> Search </button>
+    <button class="m lbtn is-underlined"> Sort </button>
+    <button class="m lbtn is-underlined"> Filter </button>
+  </div>
+  <div id="control_pane-search" class="flex xpanel tertiary">
+    <form class="flex searchbar">
+      <input type="text" placeholder="Name"></input>
+      <button type="submit">
+        <i class="fa fa-search" aria-hidden="true"></i>
+      </button>
+    </form>
+  </div>
+  <div id="control_pane-sort" class="flex xpanel tertiary">
+    <label> Sort by </label>
+    <select>
+      <option value="a"> Option </option>
+      <option value="b"> Option </option>
+      <option value="c"> Option </option>
+      <option value="d"> Option </option>
+    </select>
+  </div>
+  <div id="control_pane-filter" class="flex xpanel tertiary">
+    <div class="subctg">
+      <label> Option </label>
+      <input type="checkbox"></input><br>
+      <label> Option </label>
+      <input type="checkbox"></input><br>
+    </div>
+    <div class="subctg">
+      <label> Option </label>
+      <input type="checkbox"></input><br>
+      <label> Option </label>
+      <input type="checkbox"></input><br>
+    </div>
+  </div>
+</section>
 
-    <tbody>
-      <% @donors.each do |donor| %>
-      <tr>
-        <td>
-          <%= link_to donor, class: 'link' do %>
-            <h3 class="">
-              <%= donor.first_name %> <%= donor.last_name %>
-            </h3>
-          <% end %>
-          <p class="xs visibility epi-4m"> name </p>
-        </td>
-        <td>
-            <% if donor.bool_donat %>
-              <p class=""> Yes </p>
-            <% else %>
-              <p class=""> No </p>
-            <% end %>
-            <p class="xs visibility epi-4m"> plans to give </p>
-          </td>
-          <td>
-            <p class=""> 1 </p>
-            <p class="xs visibility epi-4m"> propensity </p>
-          </td>
-          <td>
-            <p class=""> $<%= donor.last_donat.to_i.floor %></p>
-            <p class="xs visibility epi-4m"> recent </p>
-          </td>
-          <td>
-            <p class=""> $<%= donor.lifetime_donat.to_i.floor %></p>
-            <p class="xs visibility epi-4m"> lifetime</p>
-          </td>
-          <td>
-            <p class=""> <%= donor.events_att %></p>
-            <p class="xs visibility epi-4m"> events </p>
-          </td>
-      </tr>
-      <% end %>
-
-    </tbody>
-  </table>
+<div class="js-switchable-a mgn-xy">
+  <%= render partial: 'tdonors', donors: @donors %>
 </div>
 
-<div class="js-switchable-b visibility">
+<div class="js-switchable-b not-visible">
   <%= render partial: 'cards', donors: @donors %>
 </div>

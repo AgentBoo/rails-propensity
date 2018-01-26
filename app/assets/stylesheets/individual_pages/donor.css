@@ -1,34 +1,47 @@
-section#indiv-display-section{
+/* NOTE: Donor board */
+section#dboard{
   display: grid;
     align-items: start;
     grid-template-columns: 1fr 260px;
     grid-template-rows: repeat(auto-fill, minmax(0, 1fr));
     grid-gap: 46px;
-    justify-items: start;
-  text-align: justify;
+    justify-items: stretch;
+  /* custom topbot margin + mgn-x */
+  margin: 80px 3.767%;
+  /* text-align: justify; */
 }
 
-section#indiv-display-section > *{
-  justify-self: stretch;
+section#dboard .subctg-title{
+  color: #79B473;
 }
 
-/* LEFT SIDE */
-#L-side-wrapper{
+section#dboard > #dboard-main{}
+section#dboard > #dboard-side{}
+
+
+/* NOTE: Main section of the board is on the left */
+section#dboard-main.sin{
   grid-column: 1/2;
   grid-gap: 46px;
   grid-template-columns: 260px 1fr;
   grid-template-rows: repeat(auto-fill, minmax(0, 1fr));
 }
 
-#L-top-section-quickstats{
+section#dboard-main-side{
+  /* pine 1 */
+  border-top: solid #1C7C54 2px;
   grid-area: 1/1/2/2;
 }
 
-#L-top-section-quicknotes{
+section#dboard-main-main{
+  /* pine 1 */
+  border-top: solid #1C7C54 2px;
   grid-area: 1/2/2/3;
 }
 
-#L-bot-section-notes{
+section#dboard-main-bottom{
+  /* pine 1 */
+  border-top: solid #1C7C54 2px;
   grid-column: 1/3;
   grid-gap: 1em;
   grid-row-start: 2;
@@ -36,23 +49,50 @@ section#indiv-display-section > *{
   margin-top: 12vh;
 }
 
-/* RIGHT SIDE */
-#R-side-wrapper{
+section#dboard-main-bottom > div.subctg{
+  margin-right: 2em;
+  text-align: justify;
+}
+
+section#dboard-main-bottom > div.subctg p{
+  margin: 1em 0 2.3em;
+}
+
+
+/* NOTE: Side section is on the right  */
+section#dboard-side.dex{
   grid-column: 2/3;
 }
 
-#R-section-stats{
+section#dboard-side-stats{
+  /* pine 1 */
+  border-top: solid #1C7C54 2px;
   grid-gap: 1em;
 }
 
-#R-section-stats > *:nth-child(even){
+section#dboard-side-stats > *:nth-child(even){
   margin-bottom: 46px;
 }
 
-#ctn-test-a{
-  margin-top: 50px;
-  height: 290px;
+section#dboard-side-stats > .ctn-test-a > h5:first-child{
+  margin-top: 4px;
 }
-#ctn-test-b{
-  height: 380px;
+
+
+/* NOTE: Graphs section */
+section#graphs{
+  background: #001933;
+  margin-top: 20vh;
 }
+
+section#graphs h5.subctg-title{
+  color: #FFFDFC;
+}
+
+/* ==================================== */
+/* NOTE: Events table section */
+section#tevents_section{}
+
+
+/* ==================================== */
+/* NOTE: Small elements */

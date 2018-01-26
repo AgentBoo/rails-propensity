@@ -1,52 +1,45 @@
+/*** Anything related to <h*> and <p> tags and titles ***/
 /*===============================================================================*/
 /* NOTE: Titles are all uppercase, default margin, default 0px padding remain  */
 h1, h2, h3, h4, h5, h6{
   cursor: default;
+  margin: 0;
+  padding: 0;
   text-transform: uppercase;
 }
 
-h3, h4, h5, h6{
-  margin: 4px 0;
-}
-
-a{
-  text-decoration: none;
-}
-
-.upcase{
-  text-transform: uppercase;
-}
-
-.bld{
-  font-weight: bold;
-}
 
 /* ============================================================================== */
-.title-page{
-  margin-top: 2.6em;
-}
-.indiv-pg-fullname{
-  margin: 5.676% 3.767% 0.8em;
-}
-
 /* NOTE: Titles */
+.title{}
+
+/* NOTE: Captions */
+.caption{}
+
+
+/*** Prefixes ***/
 /*===============================================================================*/
-/* NOTE: Prefixes
 /* default <p> has 1em topbottom margin */
 /* sizes are based on default h-* title sizes */
 /* hyp is from greek prefix hypo- below */
 /* epi is from greek prefix epi- above */
 
-/** Font-sizes */
-.xxl{
+
+/* NOTE: Font-sizes */
+.xxxl{
   font-size: 6em;
 }
-.xl{
+.xxl{
   font-size: 4em;
 }
-.l{
+.xl{
   font-size: 2em;
 }
+
+.l{
+  font-size: 1.4em;
+}
+
 .m{
   font-size: 1.17em;
 }
@@ -60,8 +53,8 @@ a{
   font-size: 0.67em;
 }
 
-/** hyp-pxsizeBottom-type, top constant: 1px, leftright constant: 0 */
-/*margins*/
+/* NOTE: hyp-pxsizeBottom-type, top constant: 1px, leftright constant: 0 */
+/* margins */
 .hyp-2m{
   margin: 1px 0 2px;
 }
@@ -78,7 +71,7 @@ a{
   margin: 1px 0 16px;
 }
 
-/*paddings*/
+/* paddings */
 .hyp-2p{
   padding: 1px 0 2px;
 }
@@ -95,8 +88,9 @@ a{
   padding: 1px 0 16px;
 }
 
-/* epi-pxsizeTop-type, bottom constant: 1px, leftright constant: 0 */
-/*margins*/
+
+/* NOTE: epi-pxsizeTop-type, bottom constant: 1px, leftright constant: 0 */
+/* margins */
 .epi-2m{
   margin: 2px 0 1px;
 }
@@ -113,7 +107,7 @@ a{
   margin: 16px 0 1px;
 }
 
-/*paddings*/
+/* paddings */
 .epi-2p{
   padding: 2px 0 1px;
 }
@@ -130,8 +124,9 @@ a{
   padding: 16px 0 1px;
 }
 
-/* Bidirect-size-pxsizeTopBottom-type, leftright constant: 0px */
-/*margins*/
+
+/* NOTE: Bidirect-size-pxsizeTopBottom-type, leftright constant: 0px */
+/* margins */
 .bidirect-2m{
   margin: 2px 0;
 }
@@ -147,7 +142,7 @@ a{
 .bidirect-16m{
   margin: 16px 0;
 }
-/*paddings*/
+/* paddings */
 .bidirect-2p{
   padding: 2px 0;
 }

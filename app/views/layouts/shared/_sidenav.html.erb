@@ -1,15 +1,31 @@
 <%# SIDE NAVIGATION inside .inmain inside <main> %>
 
 <%# start nav  %>
-<nav id="js-sidenav" class="sidenav">
-  <a href="#" class="link">
-    <i class="fa fa-sign-out" aria-hidden="true"></i>
-    Sign out
-  </a>
-  <a href="#" class="link">
-    <i class="fa fa-search" aria-hidden="true"></i>
-    Upload files
-  </a>
+<nav id="js-sidenav" class="sidenav outline">
+  <div class="btns">
+    <form id="searchbar" class="flex">
+      <input type="text" placeholder="Search donor by name"></input>
+      <button type="submit">
+        <i class="fa fa-search" aria-hidden="true"></i>
+      </button>
+    </form>
+
+    <%= link_to 'Dashboard', root_path, class: "btn decor-sidenav" %>
+
+    <a href="#" class="btn decor-sidenav">
+      All Donors
+    </a>
+    <a href="#" class="btn decor-sidenav">
+      Account
+    </a>
+    <a href="#" class="btn decor-sidenav">
+      Settings
+    </a>
+    <a href="#" class="btn decor-sidenav">
+      <i class="fa fa-sign-out" aria-hidden="true"></i>
+      Sign out
+    </a>
+  </div>
 
 <%# end nav  %>
 </nav>

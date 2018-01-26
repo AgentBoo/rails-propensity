@@ -1,44 +1,66 @@
 /*** LINKS ***/
 /* ============================================================================== */
-/* NOTE: Links */
-.link{
-  color: #CAC4CE;
+/* NOTE: There will be no font-sizing on .link classes and subclasses */
+a{
+  cursor: pointer;
+  text-decoration: none;
+}
+
+/* NOTE: Primary link */
+a.link{
+  /* grey 2 */
+  color: #C5CBD3;
   cursor: pointer;
 }
-.link:hover{
-  color: #2BC3E5;
+a.link:hover{
+  /* pine 1 */
+  color: #1C7C54;
   transition: 0.4s;
 }
 
-.link_{
-  color: #CAC4CE;
-  border-bottom: solid #cac4ce 1px;
+
+/* NOTE: Underlined link */
+a.link_{
+  /* grey 2 */
+  color: #C5CBD3;
+  border-bottom: solid #E8EEF2 1px;
   padding-bottom: 3px;
 }
-.link_:hover{
-  color: #2BC3E5;
+a.link_:hover{
+  /* pine 1 */
+  color: #1C7C54;
   transition: 0.4s;
 }
 
-.link-btn{
-  box-sizing: border-box;
-  cursor: pointer;
-  padding: 13px 0 13px 6px;
-  text-align: center;
-  width: 100%;
+
+/* NOTE: Modifiers */
+.link.decor-1{
+  /* grey 2 */
+  color: #C5CBD3;
 }
-.link-btn:hover{
-  background: rgba(252, 161, 125, 1);
+
+.link.decor-1:hover{
+  /* carmine 1 */
+  color: #EF6972;
   transition: 0.4s;
 }
 
-/* embelishments */
-.link.emb-1{
-  color: #645F66;
-  font-weight: bold;
+/* in .sidenav */
+.link.decor-2{
+  /* grey 1 */
+  color: #EBECEE;
 }
-
-.link.emb-1:hover{
-  color: #FCA17D;
+.link.decor-2:hover{
+  /* carmine 1 */
+  color: #EF6972;
+  transition: 0.4s;
+}
+.link.decor-3{
+  /* pine 2 */
+  color: #1A535C;
+}
+.link.decor-3:hover{
+  /* carmine 1 */
+  color: #EF6972;
   transition: 0.4s;
 }

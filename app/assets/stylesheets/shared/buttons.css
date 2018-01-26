@@ -1,12 +1,17 @@
 /*** BUTTONS ***/
 /* ============================================================================== */
-/* NOTE: Primary button */
+/* NOTE: Principal button */
+/* unfortunately, there can be a button.btn or input.btn for submit buttons, so
+.btn is not specified just on a <button> element */
 .btn{
-  background: #FFFEFE;
-  border: solid #645F66 1px;
+  /* white 2 */
+  background: #FFFDFC;
+  /* pine 2 */
+  border: solid #1A535C 1px;
   border-radius: 1px;
-  color: #645F66;
-  font-size: 13px;
+  /* pine 2 */
+  color: #1A535C;
+  font-size: 1em;
   font-stretch: expanded;
 
   padding: 13px 48px;
@@ -16,75 +21,98 @@
   text-transform: uppercase;
 }
 .btn:hover{
-  background: #FCA17D;
-  border-color: #FCA17D;
-  color: #FFFEFE;
-  transition: linear 0.2s;
+  /* carmin1  */
+  background: #EF6972;
+  border-color: #EF6972;
+  /* white 2 */
+  color: #FFFDFC;
+  transition: linear 0.3s;
 }
 
-/* NOTE: Icon button */
-.ibtn {
-  background: #FFFEFE;
-  border: solid #645F66 1px;
+/* NOTE: Modifiers */
+.btn.sm{
+  font-size: 0.8em;
+  padding: 8px 26px;
+}
+
+.btn.decor-1{
+  /* pine 2 */
+  background: #1A535C;
+  border: solid #1A535C 1px;
+  /* white 2 */
+  color: #FFFDFC;
+}
+.btn.decor-1:hover{
+  /* tangerine */
+  background: #F18F01;
+  border-color: #F18F01;
+  transition: linear 0.3s;
+}
+.btn.decor-sidenav{
+  background: transparent;
+  border: none;
+  /* cream 1 */
+  color: #FFF8F0;
+  text-align: left;
+  padding: 26.5px 0 26.5px 1.61em;
+}
+.btn.decor-sidenav:hover{
+  /* pine 2  */
+  background: #88A09E;
+  color: #fff;
+}
+
+
+/* ==================================== */
+/* NOTE: Icon button, which ate an icon */
+button.ibtn {
+  background: #EF6972;
+  border: solid #EF6972 1px;
   border-radius: 1px;
-  color: #645F66;
+  color: #FFFDFC;
+  font-size: 1em;
 
   padding: 7px 9.5px;
-  /*margin: 2px 10px;*/
 
   outline: none;
   text-align: center;
 }
-.ibtn:hover {
-  background: #FCA17D;
-  border-color: #FCA17D;
-  color: #FFFEFE;
-  transition: linear 0.2s;
-}
-
-/* NOTE: Anchor that looks like a button, is an anchor with a button inside it */
-.abtn{
-  background: transparent;
-  border: none;
-  color: #CAC4CE;
-  font-size: 22px;
-  opacity: 0.7;
-  outline: none;
-  padding: 5px;
-}
-.abtn:hover{
-  color: #FFFEFE;
-  transition: 0.4s;
-}
-.abtn > i{
-  cursor: pointer;
+button.ibtn:hover {
+  background: #F2B79F;
+  border-color: #F2B79F;
+  color: #FFFDFC;
+  transition: linear 0.3s;
 }
 
 
+/* ==================================== */
 /* NOTE: Button in a table */
-.tbtn{}
-.tbtn:hover{}
+button.tbtn{}
+button.tbtn:hover{}
 
-/* NOTE: Button that looks like a link, but isn't */
-.lbtn{
+
+
+/* ==================================== */
+/* NOTE: Button that looks like a link, but isn't -- usually in combination with js-switch-* */
+/* on login page */
+button.lbtn{
   border: none;
-  padding: none;
-  margin: none;
+  color: #828A95;
   outline: none;
-  color: #cac4ce;
+  padding: none;
 }
-
-.lbtn:hover{
-  color: #2BC3E5;
+button.lbtn:hover{
+  color: #EF6972;
   transition: 0.4s;
 }
 
 
-/* NOTE: Button group */
-div.btn-gr > .btn{
+/* ==================================== */
+/* NOTE: Buttons -- button group */
+div.btns > .btn{
   display: block;
 }
 /* prevent double borders */
-div.btn-gr > .btn:not(:last-child){
+div.btns > .btn:not(:last-child){
   border-bottom: none;
 }

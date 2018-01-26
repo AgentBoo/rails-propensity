@@ -1,52 +1,93 @@
-form.form-center{}
-
-/* RENAME TO form-postcard_donor */
-form.form-donor{
-  padding-top: 3.8em;
-  margin-bottom: 11vh;
-  padding-bottom: 11vh;
+/*** Forms, inputs, submit buttons ***/
+/* ================================================================================ */
+/* NOTE: FORMS */
+/* Donor form for new */
+form.donor_form > div.ticket{
+  padding: 2em 1.767% 3.767%;
 }
 
-form.form-donor > .postcard-side.dex{
-  margin-left: 46px;
+form.donor_form div.ticket-stub, form.donor_form div.ticket-main{
+  margin: 0 1.767%;
+  min-width: 320px;
 }
-
-form.form-donor > .postcard-side.dex > *:not(:first-child){
-  padding: 1.8em 0 0;
+form.donor_form div.subctg{
+  display: flex;
+    align-items: flex-start;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
   width: 100%;
 }
-form.form-donor > .postcardese > *:not(:first-child){
-  padding: 1.8em 0 0;
+
+form.donor_form div.subctg > *:last-child{
+  margin-bottom: 4em;
+}
+
+form.donor_form input.btn{
+  position: relative;
+  width: 280px;
+}
+
+form.donor_form input.input{
   width: 100%;
 }
 
-
-form.form-auth{
-
+/* Search bar */
+form.searchbar{
+  border: solid #E8EEF2 1px;
+  border-radius: 1px;
+}
+form.searchbar > *{
+  border: none;
+  outline: none;
+}
+form.searchbar > button{
+  /* carmine 1 */
+  color: #EF6972;
+  font-size: 14px;
+  padding: 6px 19px;
+  position: relative;
+    /* left: 1px; */
+}
+form.searchbar > button:hover{
+  background: #EF6972;
+  color: #FFFDFC;
+  transition: 0.3s;
+}
+form.searchbar > input{
+  padding-left: 18px;
 }
 
-
-.input{
+/* ==================================== */
+/* NOTE: INPUTS */
+/* NOTE: Principal input */
+input.input{
   outline: none;
 }
 
-.input.emb-1{
-  border: solid #fff 1px;
-  border-bottom: solid #EDECEE 1px;
-  border-radius: 2px;
-  margin: 1em 0;
-  padding: 0.8em 1px;
+
+/* NOTE: Input modifiers */
+.input.decor-1{
+  border: solid transparent 1px;
+  border-bottom: solid #E8EEF2 1px;
+  border-radius: 1px;
+  margin-bottom: 1.67em;
+  padding: 1em 0 1em 18px;
 }
-.input.emb-1:hover{
-  border: solid 1px #2BC3E5;
+.input.decor-1:hover{
+  border-color: #FCA17D;
 }
-.input.emb-1:focus{
-  border: solid 1px #2BC3E5;
+.input.decor-1:focus{
+  border-color: #FCA17D;
 }
 
-
-
-
-
-/*===============================================================================*/
-/* MIDSECTION - TABLES */
+.input.decor-2{
+  /* grey 1 */
+  border: solid #EBECEE 1px;
+  margin-bottom: 1.67em;
+  padding: 1em 0 1em 8px;
+}
+.input.decor-2:hover{
+  /* carmine 1 */
+  border-color: #F18F01;
+  transition: 0.3s linear;
+}

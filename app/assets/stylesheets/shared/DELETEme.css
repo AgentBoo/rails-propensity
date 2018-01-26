@@ -6,18 +6,12 @@
 
 .ctn-test{
  width: 100%;
- height: 200px;
+ height: 380px;
+ /* height: 100px; */
 }
 
-.ctn-map{
-  border: solid #CAC4CE 10px;
-  height: 79.6vh;
-}
-
-.ctn-placeholder{
-  height: 74.8vh;
-}
-
-#review{
-  margin-top: 11.767%;
+.map-test{
+  background-image: url('../../gmap.png');
+  background-size: cover;
+  background-repeat: no-repeat;
 }

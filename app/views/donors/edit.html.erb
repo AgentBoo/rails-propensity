@@ -1,6 +1,13 @@
-<h1 class="title-page mgn-xy">Editing Donor</h1>
+<!-- Page title version 2 -->
+<div class="flex xpanel pghead mgn-x">
+  <h2 class="">
+    Edit <% @donor.first_name %> <% @donor.last_name %>
+  </h2>
+  <%= link_to 'Back', donors_path, class: 'link decor-1' %>
+  <%= link_to 'Show', @donor, class: 'link decor-1' %>
+<!-- end of page title -->
+</div>
 
-<%= render 'form', donor: @donor %>
-
-<%= link_to 'Show', @donor, class: 'link' %> |
-<%= link_to 'Back', donors_path, class: 'link' %>
+<section id="formsection" class="mgn-xy">
+  <%= render 'form', donor: @donor %>
+</section>

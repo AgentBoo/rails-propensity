@@ -1,62 +1,43 @@
 <%# RIGHT SIDEPANEL yield :right_aside to content_for :right_aside %>
 <% content_for :right_aside do %>
-    <%= link_to 'Map', root_path, class: "xs link ver-1"%>
-    <%= link_to 'Kanban', kanban_path, class: "xs link ver-1"%>
 <% end %>
 
 
 <%# MAIN inside .inmain %>
-<!-- page title -->
-<!-- <div class="flex panel tertiary bb pad-x mgn-xy"> -->
-<div class="flex panel pghead mgn-x">
-    <h1 class="indiv-pg-fullname">
-      Dashboard
-    </h1>
-    <%= link_to 'Map', root_path, class: 'link underline upcase' %>
-    <%= link_to 'Kanban', kanban_path, class: 'link underline upcase' %>
+<!-- Page title -->
+<div class="flex xpanel pghead mgn-x">
+  <p class="xl"> Dashboard </p>
+  <%= link_to 'Map', root_path, class: 'link upcase' %>
+  <%= link_to 'Kanban', kanban_path, class: 'link upcase' %>
 </div>
-  <!-- <h1 class="title-page mgn-xy bb"> Dashboard </h1> -->
-<!-- </div> -->
 
-<!-- map section -->
-<section id="mapsection" class="mgn-xy">
-  <div id="map" class="ctn-map outline">
-  </div>
-  <div class="grid panel">
-    <p class="xs"> This map has been centered at Pearings, Indianapolis, IN </p>
+
+<!-- top section - map section -->
+<section id="mapsection" class="mgn-x bb">
+  <p class="subctg-title"> This map has been centered at Pearings, Indianapolis, IN </p>
+  <div id="map" class="">
   </div>
 <!-- end of map section -->
 </section>
 
-<!-- primary dashbd section -->
-<section id="dashbd">
-  <div class="grid ctn mgn-xy">
-    <div class="ctn portrait"></div>
-    <div class="ctn portrait"></div>
-    <div class="ctn portrait"></div>
-  </div>
 
-  <!-- map section -->
-  <section id="" class="mgn-xy">
-    <div id="" class="ctn portrait ctn-placeholder">
-    </div>
-  <!-- end of map section -->
-  </section>
-<!-- end of dashbd section -->
+<!-- mid section - dashboard options -->
+<section id="midsection" class="grid">
+  <div class="ctn portrait"></div>
+  <div class="ctn portrait"></div>
+  <div class="ctn portrait"></div>
+  <div class="ctn portrait"></div>
+<!-- end of dash options -->
 </section>
 
 
-<div id="review" class="flex panel tertiary bb pad-x">
-  <h2> Review </h2>
-</div>
+<!-- bottom section - review section -->
+<section id="reviewsection" class="mgn-x">
+  <h2 class=""> Review </h2>
 
-<!-- review section -->
-<section id="statsection" class="mgn-xy">
   <div class="grid quadruplet">
     <div class="">
-      <div class="flex panel tertiary bb">
-        <h3> 30 new donations </h3>
-      </div>
+      <h3 class="bb"> 30 new donations </h3>
       <p>
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit,
         sed do eiusmod tempor incididunt ut labore et dolore magna
@@ -68,9 +49,7 @@
     </div>
 
     <div class="">
-      <div class="flex panel tertiary bb">
-        <h3> 5 upcoming events </h3>
-      </div>
+      <h3 class="bb"> Lorem Ipsum </h3>
       <p>
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit,
         sed do eiusmod tempor incididunt ut labore et dolore magna
@@ -82,9 +61,7 @@
     </div>
 
     <div class="">
-      <div class="flex panel tertiary bb">
-        <h3> Lorem Ipsum </h3>
-      </div>
+      <h3 class="bb"> Lorem Ipsum </h3>
       <p>
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit,
         sed do eiusmod tempor incididunt ut labore et dolore magna
@@ -96,9 +73,7 @@
     </div>
 
     <div class="">
-      <div class="flex panel tertiary bb">
-        <h3> Lorem Ipsum </h3>
-      </div>
+      <h3 class="bb"> Lorem Ipsum </h3>
       <p>
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit,
         sed do eiusmod tempor incididunt ut labore et dolore magna

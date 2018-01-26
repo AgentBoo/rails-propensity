@@ -1,25 +1,23 @@
 // use vanilla js to make a sidebar menu
 // https://www.w3schools.com/howto/howto_js_sidenav.asp
 
-const openBtn = document.querySelector('.openBtn')
+const openBtn = document.querySelector('#js-openBtn')
 const sidenav = document.querySelector('#js-sidenav')
 const inmain = document.querySelector('.inmain')
 
 
 openBtn.addEventListener('click', function(_event){
-  console.log(sidenav.style.width)
   if(sidenav.style.width){
-    openBtn.parentNode.style.background = '#fff'
-    openBtn.style.color = '#cac4ce'
-    sidenav.style.width = ''
     inmain.style.marginLeft = '56px'
+    openBtn.style.color = '#1A535C';
+    sidenav.style.width = '';
   } else {
-    openBtn.parentNode.style.background = '#FCA17D'
-    openBtn.style.color = '#fff'
-    sidenav.style.width = '240px'
     inmain.style.marginLeft = '296px'
+    openBtn.style.color = '#EF6972';
+    sidenav.style.width = '240px'
   }
 })
+
 
 function switching(){
   const switchA = document.querySelector('.js-switch-a');
@@ -49,7 +47,7 @@ function switching(){
       }
     })
   } else {
-    console.log('something went wrong')
+    console.log('switching does not work')
   }
 }
 

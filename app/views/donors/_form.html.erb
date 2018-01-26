@@ -1,6 +1,4 @@
-<section id="" class="mgn-xy">
-  <!-- postcard section -->
-  <%= form_with(model: donor, local: true, class: 'flex postcard pad-x bt form-donor') do |form| %>
+<%= form_with(model: donor, local: true, class: 'donor_form') do |form| %>
     <% if donor.errors.any? %>
       <div id="error_explanation">
         <h2><%= pluralize(donor.errors.count, "error") %> prohibited this donor from being saved:</h2>
@@ -13,75 +11,69 @@
       </div>
     <% end %>
 
-  <!-- <form class="flex postcard pad-x bt form-donor"> -->
-    <div id="" class="flex postcard-side dex pad-xy">
-      <div class="flex panel bb formhead">
-        <h6> Occupation </h6>
-      </div>
-      <div class="">
-        <%= form.label :occupation, class: 'xs upcase bld' %><br>
-        <%= form.text_field :occupation, id: :donor_occupation, class: 'input emb-1 w100p' %>
-      </div>
-      <div class="flex panel formhead">
-        <h6> Education </h6>
-      </div>
-      <div class="">
-        <%= form.label :college, class: 'xs upcase bld' %><br>
-        <%= form.text_field :college, id: :donor_college, class: 'input emb-1 w100p' %>
-      </div>
-      <div class="">
-        <%= form.label :major, class: 'xs upcase bld' %><br>
-        <%= form.text_field :major, id: :donor_major, class: 'input emb-1 w100p' %>
-      </div>
-      <div class="">
-      </div>
-    </div>
-
-    <div class="postcardese pad-xy">
-      <div class="flex panel bb formhead">
-        <h6> Personal Information </h6>
-      </div>
-      <div class="">
+<!-- ticket section -->
+  <div class="flex ticket">
+    <!-- main -->
+    <div class="ticket-main pad-xy">
+      <div class="subctg">
+        <h6 class="subctg-title decor-donor_form bb"> Personal Information </h6>
         <%= form.label :first_name, class: 'xs upcase bld' %>
-        <%= form.text_field :first_name, id: :donor_first_name, class:'input emb-1 w100p' %>
+        <%= form.text_field :first_name, id: :donor_first_name, class:'input decor-1' %>
 
         <%= form.label :last_name, class: 'xs upcase bld' %>
-        <%= form.text_field :last_name, id: :donor_last_name, class: 'input emb-1 w100p' %>
+        <%= form.text_field :last_name, id: :donor_last_name, class: 'input decor-1' %>
 
         <%= form.label :street, class: 'xs upcase bld' %>
-        <%= form.text_field :street, id: :donor_street, class: 'input emb-1 w100p' %>
+        <%= form.text_field :street, id: :donor_street, class: 'input decor-1' %>
 
         <%= form.label :city, class: 'xs upcase bld' %>
-        <%= form.text_field :city, id: :donor_city, class: 'input emb-1 w100p' %>
+        <%= form.text_field :city, id: :donor_city, class: 'input decor-1' %>
 
         <%= form.label :state, class: 'xs upcase bld' %>
-        <%= form.text_field :state, id: :donor_state, class: 'input emb-1 w100p' %>
+        <%= form.text_field :state, id: :donor_state, class: 'input decor-1' %>
 
         <%= form.label :zipcode, class: 'xs upcase bld' %>
-        <%= form.number_field :zipcode, id: :donor_zipcode, class: 'input emb-1 w100p' %>
+        <%= form.number_field :zipcode, id: :donor_zipcode, class: 'input decor-1' %>
       </div>
-      <div class="flex panel bb formhead">
-        <h6> Contributions Information </h6>
-      </div>
-      <div>
+
+      <div class="subctg">
+        <h6 class="subctg-title decor-donor_form bb"> Contributions </h6>
         <%= form.label 'lifetime giving amount ($)', class: 'xs upcase bld' %>
-        <%= form.number_field :lifetime_donat, id: :donor_lifetime_donat, class: 'input emb-1 w100p' %>
+        <%= form.number_field :lifetime_donat, id: :donor_lifetime_donat, class: 'input decor-1' %>
 
         <%= form.label 'last giving amount ($)', class: 'xs upcase bld' %>
-        <%= form.number_field :last_donat, id: :donor_last_donat, class: 'input emb-1 w100p' %>
+        <%= form.number_field :last_donat, id: :donor_last_donat, class: 'input decor-1' %>
 
         <%= form.label 'events attended', class: 'xs upcase bld' %>
-        <%= form.number_field :events_att, id: :donor_events_att, class: 'input emb-1 w100p' %>
+        <%= form.number_field :events_att, id: :donor_events_att, class: 'input decor-1' %>
 
         <%= form.label 'plans to gift', class: 'xs upcase bld' %>
-        <%= form.check_box :bool_donat, id: :donor_bool_donat, class: 'input emb-1 w100p' %>
+        <%= form.check_box :bool_donat, id: :donor_bool_donat, class: 'input decor-1' %>
       </div>
-      <div class="actions">
-        <%= form.submit class: 'btn'%>
-      </div>
-    <!-- end of postcardese -->
+    <!-- end of ticket-main -->
     </div>
-  <!-- end of postcard -->
+
+    <!-- right side  -->
+    <div id="" class="flex ticket-stub dex pad-xy">
+      <div class="subctg">
+        <h6 class="subctg-title decor-donor_form bb"> Occupation </h6>
+        <%= form.label :occupation, class: 'xs upcase bld' %>
+        <%= form.text_field :occupation, id: :donor_occupation, class: 'input decor-1' %>
+      </div>
+      <div class="subctg">
+        <h6 class="subctg-title decor-donor_form bb"> Education </h6>
+        <%= form.label :college, class: 'xs upcase bld' %>
+        <%= form.text_field :college, id: :donor_college, class: 'input decor-1' %>
+        <%= form.label :major, class: 'xs upcase bld' %>
+        <%= form.text_field :major, id: :donor_major, class: 'input decor-1' %>
+      </div>
+    </div>
+
+  <!-- end of ticket -->
+  </div>
+
+  <!-- submit button -->
+  <%= form.submit class: 'btn decor-1 mgn-xy'%>
+
+<!-- end of form -->
 <% end %>
-  <!-- </form> -->
-</section>

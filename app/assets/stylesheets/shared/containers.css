@@ -1,14 +1,21 @@
 /*** CONTAINERS ***/
 /* ============================================================================== */
-/* NOTE: Small attributes */
+/* NOTE: Singletons */
+.bgrd{
+  /* cream 1 */
+  background: #FFF8F0;
+}
+
 .bn{
   border: none;
 }
 .bb{
-  border-bottom: solid #CAC4CE 1px;
+  /* grey 1 */
+  border-bottom: solid #EBECEE 1px;
 }
 .bt{
-  border-top: solid #cac4ce 1px;
+  /* grey 1 */
+  border-top: solid #EBECEE 1px;
   padding-top: 12px;
 }
 
@@ -23,40 +30,52 @@
   -webkit-box-shadow: 0px 3px 8px 0px rgba(202,196,206,1);
 }
 
+/* margins preset */
 .mgn-xy{
   margin: 2.767% 3.767%;
 }
 .mgn-y{
-  margin: 2.767% 0;
+  margin-top: 2.767%;
+  margin-bottom: 2.767%;
 }
 .mgn-x{
-  margin: 0 3.767%;
+  margin-left: 3.767%;
+  margin-right: 3.767%;
 }
 
+/* paddings preset */
 .pad-xy{
   padding: 6.767% 3.767%;
 }
 .pad-y{
-  padding: 6.767% auto;
+  padding-top: 6.767%;
+  padding-bottom: 6.767%;
 }
 .pad-x{
-  padding: 0 3.767%;
+  padding-left: 3.767%;
+  padding-right: 3.767%;
 }
 
 .pad34-xy{
   padding: 34px;
 }
 .pad34-x{
-  padding: 0 34px;
+  padding-left: 34px;
+  padding-right: 34px;
 }
+
 .pad46-xy{
   padding: 46px;
 }
 .pad46-x{
-  padding: 0 46px;
+  padding-left: 46px;
+  padding-right: 46px;
 }
 
-/* FLEX v GRID */
+
+/* ==================================== */
+/* NOTE: FLEX v GRID */
+/* FLEXBOX */
 .flex{
   display: flex;
   /* default:
@@ -72,38 +91,28 @@
   justify-content: center;
 }
 
+
+/* GRID */
 .grid{
   display: grid;
-    align-items: start;
+    align-items: stretch;
     grid-gap: 46px;
-    justify-items: start;
+    justify-items: stretch;
+ /* default:
+    grid-auto-flow: row;
+  */
 }
 
+/* ==================================== */
+/* NOTE: GRID based containers */
+/* current preset .grid:
+   display: grid;
+    align-items: stretch;
+    grid-gap: 46px;
+    grid-auto-flow: row;
+    justify-items: stretch;
+*/
 
-/* ============================================================================== */
-/* NOTE: Regular containers */
-.ctn{
-}
-.ctn-bg{
-  /* #EDECEE */
-  background: rgba(237, 236, 238, 1);
-}
-.ctn.portrait{
-  border: solid #CAC4CE 10px;
-  margin: 0 auto;
-}
-.ctn.limbus{
-  background: #fff;
-  padding: 6.667% 8.667%;
-}
-.ctn-focal{
-  margin: 0 auto;
-  padding: 4.667%;
-  width: 320px;
-}
-
-
-/* NOTE: GRID containers */
 .grid.duplex{
   grid-template-columns: repeat(2, 1fr);
 }
@@ -113,265 +122,433 @@
 .grid.quadruplet{
   grid-template-columns: repeat(4, 1fr);
 }
-/* children */
-.grid > *{
-  justify-self: stretch;
+
+
+/* ============================================================================== */
+/* NOTE: Regular containers */
+.ctn{}
+.ctn.portrait{
+  border: solid rgba(26, 83, 92, 0.3) 10px;
+  margin: 0 auto;
+}
+.ctn.limbus{
+  background: #fff;
+  padding: 6.667% 8.667%;
+}
+.ctn.focal{
+  margin: 0 auto;
+  padding: 1.667% 4.667%;
+  width: 320px;
+}
+
+
+/* NOTE: Named CONTAINERS */
+/* logins and signups */
+.authctn{
+  line-height: 1.6;
+}
+
+/* subcathegory container */
+.subctg > .subctg-important{
+  margin-top: 2em;
+}
+
+.subctg-title{
+  color: #88A09E;
+  margin-bottom: 1.67em;
+  padding: 1.1em 0;
+  width: 100%;
 }
 
 
 /* ============================================================================== */
-/* NOTE: PANELS -- always row, always flex, has subpanels */
+/* NOTE: yPANELS -- always column, no subpanels so far, contains options */
 /* NOTE: FLEX based */
-.flex.panel{
+.flex.ypanel{
+  align-items: center;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  height: 100%;
+}
+.flex.ypanel.primary{
+  width: 56px;
+}
+
+/* ============================================================================== */
+/* NOTE: xPANELS -- always row, always flex, has subpanels with options */
+/* NOTE: Regular -- flex based */
+.flex.xpanel{
   align-items: center;
 }
-.flex.panel.primary{
-  height: 155px;
+.flex.xpanel.primary{
+  /* height: 155px; */
   justify-content: center;
 }
-.flex.panel.secondary{
+.flex.xpanel.secondary{
   height: 69px;
   justify-content: flex-start;
 }
-.flex.panel.tertiary{
+.flex.xpanel.tertiary{
   height: 56px;
   justify-content: flex-start;
 }
-.flex.panel.quartenary{
+
+.flex.xpanel.quartenary{
   height: 69px;
   justify-content: flex-end;
 }
-.flex.panel.quinary{
+.flex.xpanel.quinary{
   height: 56px;
   justify-content: flex-end;
 }
-.flex.panel.senary{
+.flex.xpanel.senary{
   height: 69px;
   justify-content: space-between;
 }
-.flex.panel.septenary{
+.flex.xpanel.septenary{
   height: 56px;
   justify-content: space-between;
 }
-.flex.panel.formhead{
-  /* align-items: flex-end; */
-  border-bottom: solid #CAC4CE 1px;
-  /* justify-content: flex-start; */
-  width: 100%;
-  /* you don't use subpanels with formhead */
-}
-
-/* children */
-.flex.panel.formhead > *{}
-
-.flex.panel.pghead{
-  align-items: flex-end;
-  border-bottom: solid #cac4ce 1px;
-  justify-content: flex-start;
-}
-.flex.panel.pghead > *:first-child{
-}
-.flex.panel.pghead > *:not(:first-child){
-  margin: 5.676% 3.767% 1.7em;
-  position: relative;
-    bottom: 2px;
-  text-align: center;
-}
-
-
-/* NOTE: GRID based */
-.grid.panel{
-  align-items: center;
-  grid-gap: 0;
-  grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
-  justify-items: center;
-}
-/* children */
-.grid.panel > *:first-child{
-  justify-self: start;
-}
-.grid.panel > *:last-child{
-  justify-self: center;
-}
-
 
 /* ============================================================================== */
-/* NOTE: SUBPANELS -- always row, always flex*/
-.flex.subpanel{
+/* NOTE: xSUBPANELS -- always row, always flex */
+.flex.xsubpanel{
   align-items: center;
   flex-flow: row nowrap;
   /* default is justify-content: flex-start */
 }
-.flex.subpanel.sin{
+.flex.xsubpanel.sin{
   justify-content: flex-start;
 }
-.flex.subpanel.intermed{
+.flex.xsubpanel.intermed{
   justify-content: center;
 }
-.flex.subpanel.dex{
+.flex.xsubpanel.dex{
   justify-content: flex-end;
 }
 /* children */
-.flex.subpanel > *{}
+.flex.xsubpanel > *{}
 
-
-/* ============================================================================== */
-/* NOTE: REVIEWPANELS -- always row, work with grid */
-.flex.panel.reviewpan{
-  align-items: flex-end;
+/* ==================================== */
+/* NOTE: Named xPANELS -- always row */
+/* NOTE: Page header/panel aka includes page title -- flex based, NO subpanels */
+/* default FLEX: align-items: stretch; flex-flow: row nowrap; justify-content: flex-start; */
+.flex.xpanel.pghead{
+  /* depends on the size of the font of the largest element */
+  flex-flow: row wrap;
+  padding: calc(3em + 20.5px) 0 3.8em;
 }
-.flex.panel.reviewpan > div:first-child{
-  flex-basis: 34vw;
+.flex.xpanel.pghead > *{
+  border-radius: 1px;
+  padding: 0 14px 0;
+  margin-right: 3em;
+}
+.flex.xpanel.pghead > *:first-child{
+  /* pine 2 */
+  border-left: solid #1A535C 14px;
+  color: #1A535C;
 }
 
-.flex.panel.reviewpan > div:not(:first-child){
-  flex: 1;
-  display: flex;
+.flex.xpanel.pghead > *:not(:first-child){
+  /* carmine 1 */
+  border-left: solid #88A09E 14px;
+}
+
+
+/* ==================================== */
+/* NOTE: Bascule -- uses subpanels */
+/* FLEX BASED */
+/* default FLEX: align-items: stretch; flex-flow: row nowrap; justify-content: flex-start; */
+.flex.xpanel.bascule{
+  align-items: stretch;
+  flex-flow: column nowrap;
+  justify-content: center;
+}
+.flex.xpanel.bascule > *:first-child{
+  padding-bottom: 0.43em;
+}
+.flex.xpanel.bascule > div.flex.xsubpanel.dex{
+  align-self: flex-end;
+  padding-top: 0.43em;
+}
+.flex.xpanel.bascule > div.flex.xsubpanel.sin{
+  align-self: flex-start;
+  padding-top: 0.43em;
+}
+.flex.xpanel.bascule > div.flex.xsubpanel > *{
+  margin-right: 6.67em;
+}
+.flex.xpanel.bascule.pghead > *{
+  /* compensates for .pghead > * margin rule */
+  margin: 0;
+}
+
+
+/* ==================================== */
+/* NOTE: Caterpillar */
+/* FLEX BASED */
+/* default FLEX: align-items: stretch; flex-flow: row nowrap; justify-content: flex-start; */
+.flex.xpanel.caterpillar{
+  border-bottom: solid #E8EEF2 1px;
+  flex-flow: row wrap;
+}
+
+.flex.xpanel.caterpillar .is-underlined:before{
+  top: 26px;
+}
+
+.flex.xpanel.caterpillar > *:first-child{
+  margin-right: 4.33em;
+  padding-bottom: 0.33em;
+}
+
+/* caterpillar sin does not need explicit rule */
+.flex.xpanel.caterpillar.sin{}
+.flex.xpanel.caterpillar.sin > div.xsubpanel{}
+.flex.xpanel.caterpillar.sin > div.xsubpanel > * {
+  margin-right: 56px;
+}
+
+/* caterpillar dex needs explicit rules */
+.flex.xpanel.caterpillar.dex{
+  justify-content: space-between;
+}
+.flex.xpanel.caterpillar.dex > div.xsubpanel{
   justify-content: flex-end;
-  text-align: right;
 }
-.flex.panel.reviewpan > div:not(:first-child) > *{
-  flex-basis: 10vw;
-  margin: 0 46px;
+.flex.xpanel.caterpillar.dex > div.xsubpanel > *{
+  margin-left: 56px;
+}
+
+.flex.xpanel.caterpillar.pghead{}
+
+
+
+/* ==================================== */
+/* NOTE: Review panel */
+/* FLEX BASED */
+.flex.xpanel.review{
+  align-items: center;
+  /* optional; default is justify-content: flex-start */
+  justify-content: center;
+  overflow-x: scroll;
+}
+
+.flex.xpanel.review > *{
+  margin: 34px;
+}
+
+/* GRID based -- used as a review panel */
+/* current preset .grid:
+   display: grid;
+    align-items: stretch;
+    grid-gap: 46px;
+    grid-auto-flow: row;
+    justify-items: stretch;
+*/
+.grid.xpanel.review{
+
 }
 
 
 
 /* ============================================================================== */
-/* NOTE: POSTCARDS/SIDEPANELS -- always row */
-/* NOTE: FLEX based postcard */
-.flex.postcard{
+/* NOTE: Tickets -- always row */
+/* NOTE: FLEX based ticket */
+.flex.ticket{
   align-items: flex-start;
-  /* background: #fff; */
   flex-flow: row wrap;
   justify-content: space-between;
 }
+
 /* children */
-.flex.postcard > .postcardese{
+.flex.ticket > .ticket-main{
   background: #fff;
   flex: 1.61;
 }
-.flex.postcard > .postcard-side{
+
+.flex.ticket > .ticket-stub{
   background: #fff;
   flex: 1;
 }
-.flex.postcard-side{
+
+.flex.ticket-stub{
   align-items: flex-start;
   flex-flow: column nowrap;
   justify-content: center;
 }
-.flex.postcard-side.sin{}
-.flex.postcard-side.dex{
+.flex.ticket-stub.sin{}
+.flex.ticket-stub.dex{
   order: 100;
 }
-/* children of children */
-.flex.postcard-side > *{}
 
 
-
-/* NOTE: GRID based postcard */
-.grid.postcard{
-  align-items: start;
-  grid-gap: 46px;
-  grid-template-columns: repeat(3, 1fr);
-  justify-items: start;
-}
-/* children */
-.grid.postcard > *{
-  justify-self: stretch;
-}
-.grid.postcard > .postcardese.sin{
-  grid-area: 1/1/2/3;
-}
-.grid.postcard > .postcardese.dex{
-  grid-area: 1/2/2/4;
-}
-.grid.postcard > .postcard-side.sin{
-  grid-area: 1/1/2/2;
-}
-.grid.postcard > .postcard-side.dex{
-  grid-area: 1/3/2/4;
-  text-align: right;
-}
 
 /* ============================================================================== */
-/* NOTE: GRID based pexeso */
-.grid.cardpexeso{
-  grid-gap: 40px;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 375px));
-  grid-template-rows: repeat(auto-fit, minmax(0, 1fr));
-  grid-auto-flow: row;
+/* NOTE: GRID based CARD pexeso */
+/* NOTE: GRID card -- grid based individual DUPLET card actually works as a
+   byproduct, but it is not styled all that well...
+   Ideally, the combinations are:
+   .duplet > .flex.card
+   .triplet > .grid.card
+*/
+
+
+/* NOTE: TRIPLET 3 cards per row */
+.grid.cardpexeso.triplet{
+  grid-column-gap: 1.43em;
+  grid-row-gap: 6.43em;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  grid-template-rows: auto;
+  justify-content: stretch;
 }
 
-.grid.card{
+/* GRID card -- grid based individual triplet card */
+.grid.cardpexeso.triplet div.grid.card{
+  grid-gap: 0;
+  grid-template-columns: 1fr;
+  grid-template-rows: 108px 202px;
+  min-width: 320px;
+  max-width: 50vw;
+}
+.grid.cardpexeso.triplet div.grid.card > div.grid.card-top{
+  /* grey 1 */
+  background: #E8EEF2;
+  box-shadow: 0px 1px 4px 0px rgba(202,196,206,0.8);
+  -moz-box-shadow: 0px 1px 4px 0px rgba(202,196,206,0.8);
+  -webkit-box-shadow: 0px 1px 4px 0px rgba(202,196,206,0.8);
+  grid-area: 1/1/2/3;
+  grid-gap: 0;
+}
+.grid.cardpexeso.triplet div.grid.card > div.grid.card-main{
+  grid-area: 2/1/3/3;
+  padding: 1.6em 1.6em 0;
+  /* This stays consistent between triplet vs duplet cards */
+  grid-gap: 0;
+  grid-template-columns: 1.61fr 1fr;
+  grid-template-rows: 1fr 1fr 46px;
+}
+/* grid based card-top-title */
+.triplet div.grid.card div.grid.card-top > .card-top-title{
+  align-self: center;
+  /* grey 2 */
+  border-right: solid #C5CBD3 8px;
+  text-align: center;
+}
+
+/* NOTE: These 7 rules stay consistent between triplet vs duplet cards */
+/* card-top */
+div.grid.card-top > .card-top-title{
+  /* grey 2 */
+  border-left: solid #C5CBD3 8px;
+  /* pine 2 */
+  color: #1A535C;
+  font-weight: bold;
+  padding-left: 8px;
+}
+/* card-main */
+div.card{
   background: #fff;
-  border: solid #FFFBF2 1px;
-  grid-gap: 0px;
-  grid-template-columns: repeat(4, 59px) repeat(3, 1fr);
-  grid-template-rows: repeat(3, 50px) 69px;
+}
+div.card:hover{
+  box-shadow: 0px 3px 8px 1px rgb(232, 238, 242);
+  -moz-box-shadow: 0px 3px 8px 1px rgb(232, 238, 242);
+  -webkit-box-shadow: 0px 3px 8px 1px rgb(232, 238, 242);
 }
 
-.grid.card > .subcard{}
-
-.top-L.subcard{
-  align-self: stretch;
-  border-right: solid #EDECEE 1px;
-  grid-area: 1/1/4/2;
-  grid-auto-flow: column;
-  text-align: center;
-  width: 100%;
+div.card div.grid.card-main > div.card-main-primary.sin{
+  grid-area: 1/1/2/2;
 }
-.bot-L.subcard{
-  align-self: stretch;
-  border-right: solid #EDECEE 1px;
-  grid-area: 4/1/5/2;
-  grid-auto-flow: column;
-  text-align: center;
-  width: 100%;
+div.grid.card-main div.card-main-primary.sin > *:nth-child(1){
+  /* green 1 */
+  color: #79B473;
 }
-
-.top-M.subcard{
-  align-self: end;
-  grid-area: 1/2/4/5;
-  padding-left: 1.4em;
+div.grid.card-main div.card-main-primary.sin > *:nth-child(2){
+  /* blue 2 */
+  color: #7EA8BE;
 }
-
-
-.top-M.subcard > div > *{
-  margin: 0 1em;
+div.card div.grid.card-main > div.card-main-primary.dex{
+  grid-area: 1/2/2/3;
+  justify-self: end;
 }
-.top-M.subcard > a > h2{
-  color: #2BC3E5;
-  margin-left: 13px;
+div.card div.grid.card-main > div.card-main-secondary{
+  grid-area: 2/1/3/3;
 }
-
-.bot-M.subcard{
-  align-self: stretch;
-  grid-area: 4/2/5/5;
-  padding-left: 1.4em;
-}
-.bot-M.subcard > *{
-  margin: 1em;
+div.card div.grid.card-main > div.card-main-bottom{
+  /* grey 1 */
+  border-top: dotted #EBECEE 1px;
+  grid-area: 3/1/4/3;
+  line-height: 1.6;
+  padding-top: 3px;
 }
 
 
-.topbot-R.subcard{
-  align-self: stretch;
-  border-left: solid #EDECEE 1px;
-  opacity: 0.8;
-  grid-area: 1/5/5/8;
+/* NOTE: DUPLET 2 cards per row */
+.grid.cardpexeso.duplet{
+  grid-gap: 2em;
+  grid-template-columns: repeat(auto-fit, minmax(38vw, 1fr));
+  grid-template-rows: auto;
+  justify-content: space-evenly;
 }
 
-.grid.card .indicator-lg{
-  background: #FCA17D;
-  border-radius: 50%;
-  padding: 1em;
+/* GRID card */
+.grid.cardpexeso.duplet div.grid.card{
+  padding-top: 3.1em;
+  min-width: 320px;
+  max-width: 50vw;
+}
+.grid.cardpexeso.duplet div.grid.card > div.grid.card-top{}
+.grid.cardpexeso.duplet div.grid.card > div.grid.card-main{}
+
+
+/* FLEX card -- flex based individual duplet card */
+.grid.cardpexeso.duplet div.flex.card{
+  align-items: stretch;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  height: 209px;
+}
+.grid.cardpexeso.duplet div.flex.card > div.grid.card-top{
+  flex: 1;
+  padding: 2.61em 0;
+}
+.grid.cardpexeso.duplet div.flex.card > div.grid.card-main{
+  flex: 1.61;
+  min-width: 320px;
+  padding: 2.61em 1.6em 0;
+
+  /* This stays consistent between triplet vs duplet cards */
+  grid-gap: 0;
+  grid-template-columns: 1.61fr 1fr;
+  grid-template-rows: auto;
+}
+/* flex based card-top-title*/
+.duplet div.flex.card div.grid.card-top > .card-top-title{
+  align-self: start;
+  text-align: left;
 }
 
-.grid.card .indicator-sm{
-  background: #EDECEE;
-  border-radius: 50%;
-  font-size: 11px;
-  margin: 2px;
-  padding: 0.6em 0.5em;
+
+
+
+/* ============================================================================== */
+/* NOTE: GRID BASED general pexeso */
+
+.grid.address_book{
+  align-items: stretch;
+  grid-gap: 8px;
+  grid-template-columns: 16vw 1fr;
+  grid-template-rows: auto;
+  justify-content: space-evenly;
+}
+
+.grid.address_book > div.address_book-letter{
+  align-self: start;
+  justify-self: center;
+}
+
+.grid.address_book > div.grid.address_book-main{
+  grid-gap: 8px;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 220px));
+  grid-template-rows: auto;
 }

@@ -1,53 +1,61 @@
+<!-- card pexeso section -->
 <section id="cardview" class="mgn-xy">
-          <div class="grid cardpexeso">
-            <% @donors.each do |donor| %>
-            <div class="grid card">
-              <div class="top-L subcard">
-                <p class="xxs"> contacted </p>
-                <i class="fa fa-check indicator-lg" aria-hidden="true"></i>
-                <p class="xxs"> will donate </p>
-                <i class="fa fa-thumbs-up indicator-lg" aria-hidden="true"></i>
-              </div>
-              <div class="top-M subcard">
-                <%= link_to donor, class: 'link' do %>
-                  <h2>
-                    <%= donor.first_name %> <%= donor.last_name %>
-                  </h2>
-                <% end %>
-
-                <div class="flex">
-                  <div>
-                    <h3 class=""> $200 </h3>
-                    <p class="xs epi-4m"> recent</p>
-                  </div>
-                  <div>
-                    <h3 class=""> $5000 </h3>
-                    <p class="xs epi-4m"> lifetime </p>
-                  </div>
-                </div>
-
-              </div>
-              <div class="bot-M subcard flex">
-                <div>
-                  <h3 class=""> 3 </h3>
-                  <p class="xs epi-4m"> events </p>
-                </div>
-                <div>
-                  <h3 class=""> 23 </h3>
-                  <p class="xs epi-4m"> propensity </p>
-                </div>
-              </div>
-              <div class="bot-L subcard">
-                <i class="fa fa-envelope-o fa-fw indicator-sm" aria-hidden="true"></i>
-                <i class="fa fa-phone fa-fw indicator-sm" aria-hidden="true"></i>
-              </div>
-
-              <div class="topbot-R subcard">
-                <!-- <i class="fa fa-fw fa-female indicator-lg" aria-hidden="true"></i></div> -->
-              </div>
-
-            </div>
+  <div class="grid cardpexeso triplet">
+  <% @donors.each do |donor| %>
+    <div class="grid card outline">
+      <!-- <div class="card-stub"></div> -->
+      <div class="grid card-top">
+        <p class="xl card-top-title">
+          <%= link_to donor, class: 'link decor-3' do %>
+            <% if donor.last_name.blank? && donor.first_name.blank? %>
+              Anonymous
+            <% else %>
+              <%= donor.last_name %> <%= donor.first_name %>
             <% end %>
+          <% end %>
+        </p>
+      </div>
+      <div class="grid card-main">
+        <div class="card-main-primary sin">
+          <p class="l"> Planned donation </p>
+          <p class="m"> lorem ipsum </p>
+        </div>
+        <div class="card-main-primary dex">
+          <% if donor.bool_donat %>
+            <p class="l"> <i class="fa fa-check is-positive" aria-hidden="true"></i></p>
+          <% else %>
+            <p class="l"> <i class="fa fa-times is-negative" aria-hidden="true"></i></p>
+          <% end %>
+          <p class="l"> <i class="fa fa-handshake-o" aria-hidden="true"></i></p>
+        </div>
+        <div class="card-main-secondary">
+          <table class="tcard">
+            <tbody>
+              <tr>
+                <td class=""> last giving amount </td>
+                <td class=""> $<%= donor.last_donat.to_i.floor %> </td>
+              </tr>
+              <tr>
+                <td class=""> Lifetime giving amount </td>
+                <td class=""> $<%= donor.lifetime_donat.to_i.floor %> </td>
+              </tr>
+              <tr>
+                <td class=""> events attended </td>
+                <td class=""> <%= donor.events_att %> </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="card-main-bottom">
+          <p class=""><i> donor@email.com </i></p>
+          <p class=""> xxx-xxx-xxxx </p>
+        </div>
+      </div>
+    <!-- end of card -->
+    </div>
+  <% end %>
 
-          </div>
-        </section>
+  <!-- end of pexeso -->
+  </div>
+<!-- end of cardview section -->
+</section>

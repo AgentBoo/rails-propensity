@@ -1,0 +1,63 @@
+section#formsection{
+  /* background: #F2ECE6; */
+  background: #FFF8F0;
+}
+
+.subctg-title.decor-donor_form{
+  border-bottom: solid #88A09E 1px;
+  color: #88A09E;
+}
+
+/* NOTE: Control panel */
+section#control_pane > div.flex.xpanel{
+  padding-bottom: 6px;
+}
+section#control_pane > div.flex.xpanel > *{
+  margin-right: 69px;
+}
+section#control_pane .is-underlined:before{
+  position: absolute;
+    top: 23px;
+    left: 0;
+}
+
+
+/* NOTE: Search */
+div#control_pane-search form.searchbar > input{
+  width: 320px;
+}
+
+div#control_pane-search form.searchbar > button{
+  /* sage 2 */
+  background: #88A09E;
+  color: #FFFDFC;
+  padding: 10px 34px;
+}
+div#control_pane-search form.searchbar > button:hover{
+  /* carmine 1 */
+  background: #EF6972;
+  transition: 0.3s linear;
+}
+
+
+/* NOTE: Sort */
+div#control_pane-sort > select{
+  background: transparent;
+  -webkit-border-radius: 1px;
+  -moz-border-radius: 1px;
+  border-radius: 1px;
+  /* grey 1 */
+  border: solid #EBECEE 1px;
+  height: 34px;
+  width: 169px;
+  outline: none;
+}
+
+
+/* NOTE: Filter */
+div#control_pane-filter > div.subctg > label{
+  margin-right: 34px;
+}
+div#control_pane-filter > div.subctg > input{
+  margin-bottom: 1em;
+}
