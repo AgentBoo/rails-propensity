@@ -9,9 +9,3 @@
  height: 380px;
  /* height: 100px; */
 }
-
-.map-test{
-  background-image: url('../../gmap.png');
-  background-size: cover;
-  background-repeat: no-repeat;
-}
