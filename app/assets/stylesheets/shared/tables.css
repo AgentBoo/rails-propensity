@@ -38,7 +38,7 @@ table#tevents > tbody > tr:hover{
   color: #313E50;
 }
 
-}
+
 table#tevents > tbody > tr > th:nth-child(1){
   text-align: center;
 }
