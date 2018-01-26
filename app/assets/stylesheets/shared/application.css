@@ -35,7 +35,7 @@ header.head{
   position: fixed;
     top: 0;
     left: 0;
-  z-index: 20;
+  z-index: 200;
 }
 
 main.main{
@@ -58,6 +58,7 @@ footer.foot{
 /* header */
 header .inhead > .xsubpanel > *{
   margin: 0 46px;
+  z-index: 100;
 }
 
 /* main */
@@ -72,7 +73,7 @@ main .inmain{
 
   height: 100%;
   /* header height: flex panel senary */
-  margin-top: 69px;
+  /* margin-top: 69px; */
   /* sidenav 240px + aside 56px = 296px */
   margin-left: 56px;
   transition: 0.3s linear;
@@ -162,22 +163,21 @@ a#sitename{
 /* ==================================== */
  /* NOTE: Sidebar nav */
 nav.sidenav{
-  /* background: #1A535C; */
+  background: #1A535C;
   /* height: 100%; */
-  /* opacity: 0.2; */
-  /* overflow-x: hidden; */
+  overflow-x: hidden;
   /* padding-top: calc(3em + 20.5px + 69px); */
-  /* position: fixed; */
-   /* top: 0; */
+  position: fixed;
+   top: 0;
    /* width of aside */
-   /* left: 56px; */
-  /* transition: 0.3s linear; */
+   left: 56px;
+  transition: 0.3s linear;
   /* width will be 240px */
-  /* width: 0; */
-  /* z-index: 10; */
+  width: 0;
+  z-index: 10;
 }
 nav.sidenav > *{
-  /* display: block; */
+  display: block;
   /* position: relative; */
 }
 nav.sidenav > a.link:first-child{

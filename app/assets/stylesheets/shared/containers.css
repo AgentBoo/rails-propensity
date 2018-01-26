@@ -128,7 +128,7 @@
 /* NOTE: Regular containers */
 .ctn{}
 .ctn.portrait{
-  border: solid rgba(26, 83, 92, 0.3) 10px;
+  /* border: solid rgba(26, 83, 92, 0.3) 10px; */
   margin: 0 auto;
 }
 .ctn.limbus{
@@ -236,7 +236,7 @@
 .flex.xpanel.pghead{
   /* depends on the size of the font of the largest element */
   flex-flow: row wrap;
-  padding: calc(3em + 20.5px) 0 3.8em;
+  /* padding: calc(3em + 20.5px) 0 3.8em; */
 }
 .flex.xpanel.pghead > *{
   border-radius: 1px;
