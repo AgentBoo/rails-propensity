@@ -35,7 +35,7 @@ header.head{
   position: fixed;
     top: 0;
     left: 0;
-  z-index: 20;
+  z-index: 30;
 }
 
 main.main{
@@ -72,11 +72,11 @@ main .inmain{
 
   height: 100%;
   /* header height: flex panel senary */
-  margin-top: 69px;
+  /* margin-top: 69px; */
   /* sidenav 240px + aside 56px = 296px */
   margin-left: 56px;
   transition: 0.3s linear;
-  z-index: -10;
+  z-index: -20;
 }
 
 /* footer */
@@ -174,7 +174,7 @@ nav.sidenav{
   transition: 0.3s linear;
   /* width will be 240px */
   width: 0;
-  z-index: 10;
+  z-index: -10;
 }
 nav.sidenav > *{
   display: block;
